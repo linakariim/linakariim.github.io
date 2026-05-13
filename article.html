@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kedokteran Aneh dalam Lukisan — Lina Kariim</title>
   <meta name="description" content="Ketika penyembuhan adalah tontonan: menjelajahi praktik kedokteran mengerikan dalam lukisan sejarah.">
+  <meta name="author" content="Lina Kariim">
+  <meta name="tags" content="seni, sejarah, kedokteran, lukisan">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -37,7 +39,6 @@
 
     a { color: inherit; text-decoration: none; }
 
-    /* ─── NAV ─── */
     .nav {
       border-bottom: 1px solid var(--border);
       padding: 0 64px;
@@ -73,7 +74,6 @@
 
     .nav-links a:hover { color: var(--gold-dark); }
 
-    /* ─── ARTICLE HEADER ─── */
     .article-header {
       max-width: 760px;
       margin: 0 auto;
@@ -106,7 +106,7 @@
 
     .article-header h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 400;
       line-height: 1.15;
       color: var(--black);
@@ -137,7 +137,6 @@
       object-fit: cover;
     }
 
-    /* ─── ARTICLE BODY ─── */
     .article-body {
       max-width: 680px;
       margin: 0 auto;
@@ -172,10 +171,11 @@
       font-style: italic;
       color: var(--gray);
       line-height: 1.6;
+      margin-bottom: 0;
     }
 
     .article-body figure {
-      margin: 40px -40px;
+      margin: 40px 0;
     }
 
     .article-body figure img {
@@ -191,7 +191,44 @@
       font-style: italic;
     }
 
-    /* ─── SHARE ─── */
+    .sources {
+      background: var(--cream-dark);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 28px 32px;
+      margin-top: 56px;
+    }
+
+    .sources h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .sources ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sources li {
+      font-size: 0.825rem;
+      color: var(--gray);
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .sources li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dark);
+    }
+
     .share-section {
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -231,9 +268,6 @@
       color: var(--gold-dark);
     }
 
-    .share-btn.copy:hover { border-color: var(--charcoal); color: var(--charcoal); }
-
-    /* ─── RELATED ARTICLES ─── */
     .related {
       background: var(--cream-dark);
       padding: 64px;
@@ -266,6 +300,7 @@
       border-radius: 2px;
       overflow: hidden;
       transition: border-color 0.2s;
+      display: block;
     }
 
     .related-card:hover { border-color: var(--gold-light); }
@@ -301,7 +336,6 @@
       color: var(--black);
     }
 
-    /* ─── FOOTER ─── */
     footer {
       background: var(--cream-dark);
       border-top: 1px solid var(--border);
@@ -323,14 +357,12 @@
 
     .footer-links a:hover { color: var(--gold-dark); }
 
-    /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
       .nav { padding: 0 24px; }
       .nav-links { display: none; }
       .article-header { padding: 48px 24px 32px; }
       .article-header h1 { font-size: 2rem; }
       .article-body { padding: 0 24px 56px; }
-      .article-body figure { margin: 32px 0; }
       .share-section { flex-direction: column; gap: 20px; }
       .related { padding: 48px 24px; }
       .related-grid { grid-template-columns: 1fr; }
@@ -340,7 +372,6 @@
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">Lina <span>Kariim</span></a>
   <ul class="nav-links">
@@ -350,7 +381,6 @@
   </ul>
 </nav>
 
-<!-- ─── ARTICLE HEADER ─── -->
 <header class="article-header">
   <a href="index.html" class="back-link">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
@@ -366,10 +396,9 @@
   </div>
 </header>
 
-<!-- ─── ARTICLE BODY ─── -->
 <article class="article-body">
 
-  <p>Di sebuah lukisan milik Pieter van der Lyn, seorang tabib sedang melakukan prosedur yang membuat kita winced hari ini — trepanasi tengkorak sementara pasien terkunci dalam posisi yang mustahil. lukisan itu, yang dibuat pada tahun 1700-an, bukan gambaran tentang kebrutalan dokter pada masa itu; ini adalah representasi dari praktik kedokteran yang saat itu dianggap maju dan modern.</p>
+  <p>Di sebuah lukisan karya Pieter van der Lyn, seorang tabib sedang melakukan prosedur yang membuat kita meringis hari ini — trepanasi tengkorak sementara pasien terkunci dalam posisi yang mustahil. Lukisan itu, yang dibuat pada tahun 1700-an, bukanlah gambaran tentang kebrutalan dokter pada masa itu; ini adalah representasi dari praktik kedokteran yang saat itu dianggap maju dan modern.</p>
 
   <p>Kedokteran kuno adalah dunia yang sangat berbeda dari yang kita kenal sekarang. Sebelum kita memahami bahwa kuman menyebabkan penyakit, sebelum kita punya anestesi yang efektif, sebelum kita punya pemahaman dasar tentang anatomi — penyembuh mencari jalan mereka melalui coba-coba, ritual, dan spekulasi yang berani.</p>
 
@@ -380,12 +409,12 @@
   <p>Pertimbangkan bagaimana kita memandang prosedur bedah modern. Dalam lukisan-lukisan era Victoria, operasi adalah tontonan publik. Pasien dijepit di kursi khusus — kursi pengikat — sementara dokter bekerja secepat mungkin karena belum ada anestesi yang efektif. Pasien bisa berteriak, melolong, atau bahkan pingsan karena syok. Penonton menonton dari tribun seperti mereka menonton teater.</p>
 
   <blockquote>
-    <p>"Operation was a spectacle — blood, scream, and the relentless tick of the clock. The surgeon's reputation was built not just on skill, but on speed. The faster you worked, the less your patient suffered. Or so they believed."</p>
+    <p>"Operasi adalah tontonan — darah, jeritan, dan detak jam yang tak henti. Reputasi dokter dibangun bukan hanya dari keterampilan, tapi dari kecepatan. Semakin cepat bekerja, semakin sedikit penderitaan pasien. Setidaknya itu yang mereka percaya."</p>
   </blockquote>
 
   <h2>Lukisan sebagai Saksi Sejarah</h2>
 
-  <p>Seni punya cara unik untuk membuat kita merasakan ketidaknyamanan yang tidak bisa diberikan oleh teks sejarah. Ketika kita melihat lukisan dari prosedur medis era dulu, kita tidak hanya membaca tentang mereka — kita merasakan visera melihatnya.</p>
+  <p>Seni punya cara unik untuk membuat kita merasakan ketidaknyamanan yang tidak bisa diberikan oleh teks sejarah. Ketika kita melihat lukisan dari prosedur medis era dulu, kita tidak hanya membaca tentang mereka — kita merasakan secara langsung betapa berbahayanya proses itu.</p>
 
   <p>Ada sesuatu yang mengganggu sekaligus memesona tentang bagaimana seniman menggambarkan tubuh dalam konteks medis. Goresan cat di atas kanvas membawa kita ke ruangan tempat darah dituangkan dari vas ke lantai. Ke mana para dokter membuang anggota tubuh yang diamputasi. Bagaimana ruangan itu bau — dan bau seperti apa yang digambarkan sebagai bagian dari pengalaman.</p>
 
@@ -394,54 +423,60 @@
     <figcaption>Ilustrasi dari manual bedah abad ke-18 — menunjukkan alat-alat yang digunakan untuk prosedur yang sekarang kita anggap mengerikan.</figcaption>
   </figure>
 
-  <h2>Dari Trepanasi到 Anestesi</h2>
+  <h2>Dari Trepanasi ke Anestesi</h2>
 
   <p>Trepanasi — mengebor lubang di tengkorak untuk meredakan tekanan atau "melepaskan setan" — adalah salah satu prosedur bedah tertua yang diketahui. Bukti trepanasi ditemukan di banyak peradaban kuno: dari Mesopotamia hingga Peru, dari Afrika hingga Polinesia.</p>
 
-  <p>Mengapa orang同意 untuk这么做? Jawabannya terletak pada kepercayaan zaman itu. Sakit kepala yang parah, epilepsi, gangguan mental — semuanya dianggap sebagai hasil dari kekuatan jahat yang terjebak di dalam tengkorak. Membuat lubang di tengkorak berarti memberikan jalan keluar bagi kekuatan jahat tersebut. Kadang-kadang, pasien benar-benar merasa lebih baik setelah prosedur — mungkin karena tekanan intrakranial berkurang, atau mungkin karena efek plasebo yang kuat.</p>
+  <p>Mengapa orang mau menjalani prosedur ini? Jawabannya terletak pada kepercayaan zaman itu. Sakit kepala yang parah, epilepsi, gangguan mental — semuanya dianggap sebagai hasil dari kekuatan jahat yang terjebak di dalam tengkorak. Membuat lubang di tengkorak berarti memberikan jalan keluar bagi kekuatan jahat tersebut. Kadang-kadang, pasien benar-benar merasa lebih baik setelah prosedur — mungkin karena tekanan intrakranial berkurang, atau mungkin karena efek plasebo yang kuat.</p>
 
-  <p>Berabad-abad kemudian, anestesi muncul dan mengubah segalanya. Tapi transisi itu tidak mudah. Ether dan kloroform, meskipun efektif, membawa risiko mereka sendiri. Banyak dokter dan pasien alike awalnya skeptis tentang apakah membiarkan diri tidak sadar selama operasi adalah ide yang baik.</p>
+  <p>Berabad-abad kemudian, anestesi muncul dan mengubah segalanya. Tapi transisi itu tidak mudah. Ether dan kloroform, meskipun efektif, membawa risiko mereka sendiri. Banyak dokter dan pasien sama-sama awalnya skeptis tentang apakah membiarkan diri tidak sadar selama operasi adalah ide yang baik.</p>
 
   <h2>Makna di Balik Kanvas</h2>
 
   <p>Mungkin hal paling mengejutkan tentang melukis praktik medis kuno adalah apa yang mereka ungkapkan tentang harapan manusia. Di setiap era, orang mencari cara untuk memahami dan mengatasi penderitaan. Menciptakan ritual, alat, dan teknik yang — betapapun mengerikannya bagi kita sekarang — merupakan upaya jujur untuk meredakan rasa sakit dan memberi makna pada kematian.</p>
 
-  <p>Saat kita melihat lukisan-lukisan ini, kita tidak hanya melihat masa lalu. Kita melihat cermin. Karena kedokteran modern, dengan semua pencapaiannya, juga akan tampak mengerikan bagi generasi yang akan datang. Prosedur yang kita anggap rutin hari ini mungkin akan membuat cucu-cucu kita menganggkat alis dengan horror yang sama.</p>
+  <p>Saat kita melihat lukisan-lukisan ini, kita tidak hanya melihat masa lalu. Kita melihat cermin. Karena kedokteran modern, dengan semua pencapaiannya, juga akan tampak mengerikan bagi generasi yang akan datang. Prosedur yang kita anggap rutin hari ini mungkin akan membuat cucu-cucu kita mengangkat alis dengan horor yang sama.</p>
 
   <p>Inilah kekuatan seni: ia membuat kita merasa, bukan hanya mengetahui. Dan dalam kasus praktik kedokteran kuno, perasaan itu adalah campuran dari ketidaknyamanan, kekaguman, dan terima kasih bahwa kita tidak hidup di era itu — betapapun cantiknya lukisannya.</p>
 
+  <div class="sources">
+    <h3>Sumber</h3>
+    <ul>
+      <li>Peter Conrad, <em>Modern Times, Modern Places</em> (Thames & Hudson, 1998) — tentang konteks budaya seni Barok dan kedokteran era Victoria.</li>
+      <li>Roy Porter, <em>Disease, Medicine and Society in England, 1550–1860</em> (Cambridge University Press, 1995) — sejarah praktik kedokteran di Inggris.</li>
+      <li>Sherwin B. Nuland, <em>The Mysteries Within: A Surgeon Explores Myth, Memory, Disease and the Body</em> (Simon & Schuster, 2000) — trepanasi dan praktik bedah kuno.</li>
+      <li>Atul Gawande, <em>Complications: A Surgeon&apos;s Notes on an Imperfect Science</em> (Picador, 2003) — refleksi tentang sejarah bedah modern.</li>
+      <li>The Wellcome Collection, London — arsip digital tentang sejarah kedokteran: wellcomecollection.org</li>
+    </ul>
+  </div>
+
 </article>
 
-<!-- ─── SHARE ─── -->
 <div class="share-section">
   <span class="share-label">Bagikan Artikel Ini</span>
   <div class="share-buttons">
-    <a href="https://twitter.com/intent/tweet?text=Kedokteran+Aneh+dalam+Lukisan&url=https://linakariim.github.io/article.html" target="_blank" class="share-btn">
+    <a href="https://twitter.com/intent/tweet?text=Kedokteran+Aneh+dalam+Lukisan&url=https://linakariim.github.io/linakariim/article.html" target="_blank" class="share-btn">
       <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       X / Twitter
     </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://linakariim.github.io/article.html" target="_blank" class="share-btn">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://linakariim.github.io/linakariim/article.html" target="_blank" class="share-btn">
       <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.355 2.686.355v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       Facebook
     </a>
-    <a href="https://wa.me/?text=Kedokteran+Aneh+dalam+Lukisan%20https://linakariim.github.io/article.html" target="_blank" class="share-btn">
+    <a href="https://wa.me/?text=Kedokteran+Aneh+dalam+Lukisan%20https://linakariim.github.io/linakariim/article.html" target="_blank" class="share-btn">
       <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 21l1.27-4.072a11.816 11.816 0 005.683 3.034l.332.024.755-.121a11.815 11.815 0 009.404-12.136z"/></svg>
       WhatsApp
     </a>
-    <button class="share-btn copy" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Tersalin!'">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-      Salin Link
-    </button>
+    <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Tersalin!'">Salin Link</button>
   </div>
 </div>
 
-<!-- ─── RELATED ARTICLES ─── -->
 <section class="related">
   <div class="related-header">
     <h2>Artikel Lainnya</h2>
   </div>
   <div class="related-grid">
-    <a href="#" class="related-card">
+    <a href="artikel-2.html" class="related-card">
       <div class="related-thumb">
         <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&q=80" alt="Seni Barok">
       </div>
@@ -450,19 +485,18 @@
         <h3>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
       </div>
     </a>
-    <a href="#" class="related-card">
+    <a href="artikel-7.html" class="related-card">
       <div class="related-thumb">
-        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&q=80" alt="Impasto">
+        <img src="https://images.unsplash.com/photo-1580136573397-4175f5d0e73b?w=600&q=80" alt="Simbolisme">
       </div>
       <div class="related-info">
-        <span class="related-tag">Seni</span>
-        <h3>Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</h3>
+        <span class="related-tag">Filsafat</span>
+        <h3>Simbolismus: Ketika Seni Menjadi Meditasi</h3>
       </div>
     </a>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
 <footer>
   <span>&copy; 2026 Lina Kariim &middot; Dari Lukisan ke Hati</span>
   <div class="footer-links">
