@@ -3,607 +3,772 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lina Kariim | Lukisan, Sejarah, dan Filsafat</title>
-  <meta name="description" content="Lina Kariim — konten seni, sejarah, dan filsafat dalam bahasa Indonesia. Dari lukisan ke cerita, dari galeri ke hati.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Lina Kariim | Lukisan, Sejarah, dan Filsafat">
-  <meta property="og:description" content="Konten seni, sejarah, dan filsafat dalam bahasa Indonesia.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/47840883">
-  <meta name="theme-color" content="#1a1a2e">
+  <title>Lina Kariim — Lukisan, Sejarah, dan Filsafat</title>
+  <meta name="description" content="Lina Kariim — menulis tentang seni, sejarah, dan filsafat. Setiap goresan lukisan, setiap tokoh, setiap cerita — kita explores bersama.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=85">
+    <meta property="og:url" content="https://linakariim.github.io/">
+  <meta name="theme-color" content="#C9A96E">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0f0f1a;
-      --surface: #1a1a2e;
-      --border: #2a2a4e;
-      --text: #e8e6f0;
-      --muted: #8b8ba0;
-      --accent: #c9a96e;
-      --accent-dim: #8b7347;
-      --radius: 12px;
+      --cream: #FAF7F2;
+      --cream-dark: #F0EBE3;
+      --gold: #C9A96E;
+      --gold-dark: #A8864A;
+      --gold-light: #EDD9A3;
+      --black: #0D0D0D;
+      --charcoal: #2A2A2A;
+      --gray: #6B6B6B;
+      --gray-light: #9A9A9A;
+      --border: #E5DDD0;
+      --white: #FFFFFF;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
 
-    /* ─── NAV ─── */
-    nav {
+    /* ─── TOP BAR ─── */
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      padding: 0 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 24px 48px;
-      border-bottom: 1px solid var(--border);
+      height: 64px;
     }
 
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: -0.3px;
+    .topbar-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: var(--black);
     }
 
-    .nav-links {
+    .topbar-logo span { color: var(--gold); }
+
+    .topbar-nav {
       display: flex;
-      gap: 32px;
-      list-style: none;
+      align-items: center;
+      gap: 36px;
     }
 
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: var(--muted);
+    .topbar-nav a {
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--gray);
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--accent); }
+    .topbar-nav a:hover { color: var(--gold-dark); }
+
+    .topbar-social {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .topbar-social a {
+      color: var(--gray);
+      font-size: 0.75rem;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .topbar-social a:hover { color: var(--gold-dark); }
 
     /* ─── HERO ─── */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-      padding: 80px 48px 64px;
+      min-height: 560px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero-text { max-width: 520px; }
+    .hero-content {
+      padding: 72px 64px 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+    }
 
     .hero-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 2px;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
+      color: var(--gold-dark);
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
       font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      color: var(--text);
+      line-height: 1.12;
+      color: var(--black);
+      margin-bottom: 28px;
+      letter-spacing: -1px;
     }
 
     .hero h1 em {
       font-style: italic;
-      color: var(--accent);
+      color: var(--gold-dark);
     }
 
-    .hero-desc {
+    .hero p {
       font-size: 1rem;
-      color: var(--muted);
+      color: var(--gray);
+      line-height: 1.75;
+      max-width: 420px;
       margin-bottom: 36px;
-      line-height: 1.7;
     }
 
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-actions { display: flex; gap: 16px; align-items: center; }
 
-    .btn-primary {
+    .btn-gold {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--accent);
-      color: var(--bg);
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.8rem;
       font-weight: 500;
-      font-size: 0.875rem;
-      padding: 12px 24px;
-      border-radius: var(--radius);
-      transition: opacity 0.2s;
+      letter-spacing: 0.5px;
+      padding: 14px 28px;
+      border-radius: 2px;
+      transition: background 0.2s;
     }
 
-    .btn-primary:hover { opacity: 0.85; }
+    .btn-gold:hover { background: var(--gold-dark); }
 
-    .btn-ghost {
+    .btn-outline {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.875rem;
-      padding: 12px 24px;
-      border-radius: var(--radius);
+      color: var(--gray);
+      font-size: 0.8rem;
+      padding: 14px 28px;
+      border-radius: 2px;
       transition: border-color 0.2s, color 0.2s;
     }
 
-    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold-dark); }
 
-    .hero-visual {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 16/9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-visual iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: var(--muted);
-    }
-
-    .video-placeholder svg { opacity: 0.4; }
-
-    /* ─── CHANNEL STATS ─── */
-    .stats-bar {
-      display: flex;
-      gap: 0;
-      padding: 0 48px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .stat-item {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 28px 24px;
-      border-right: 1px solid var(--border);
-      gap: 4px;
-    }
-
-    .stat-item:last-child { border-right: none; }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* ─── SHORTS GRID ─── */
-    .section { padding: 72px 48px; }
-    .section + .section { padding-top: 0; }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 32px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-    }
-
-    .section-link {
-      font-size: 0.8125rem;
-      color: var(--accent-dim);
-      transition: color 0.2s;
-    }
-
-    .section-link:hover { color: var(--accent); }
-
-    .shorts-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .short-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
-      cursor: pointer;
-    }
-
-    .short-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
-
-    .short-thumb {
-      aspect-ratio: 9/16;
-      overflow: hidden;
-      background: var(--border);
+    .hero-image {
+      background: var(--charcoal);
       position: relative;
+      overflow: hidden;
     }
 
-    .short-thumb img {
+    .hero-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0.85;
     }
 
-    .short-duration {
+    .hero-image-overlay {
       position: absolute;
-      bottom: 8px;
-      right: 8px;
-      background: rgba(0,0,0,0.75);
-      font-size: 0.7rem;
-      font-weight: 500;
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #fff;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13,13,13,0.3) 0%, transparent 60%);
     }
 
-    .short-info { padding: 14px 14px 18px; }
+    /* ─── FEATURED ARTICLE ─── */
+    .featured {
+      padding: 72px 64px;
+      border-bottom: 1px solid var(--border);
+    }
 
-    .short-title {
-      font-size: 0.8125rem;
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 48px;
+    }
+
+    .featured-main {
+      cursor: pointer;
+    }
+
+    .featured-main-thumb {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      margin-bottom: 24px;
+      background: var(--cream-dark);
+    }
+
+    .featured-main-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .featured-main:hover .featured-main-thumb img { transform: scale(1.03); }
+
+    .featured-main-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 12px;
+    }
+
+    .featured-main h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
       font-weight: 400;
-      line-height: 1.4;
-      color: var(--text);
+      line-height: 1.25;
+      color: var(--black);
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .featured-main p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .featured-side {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .featured-side-item {
+      cursor: pointer;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .featured-side-item:last-child { border-bottom: none; }
+
+    .featured-side-item .tag {
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .featured-side-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .featured-side-item p {
+      font-size: 0.8rem;
+      color: var(--gray-light);
+    }
+
+    /* ─── TOPICS ─── */
+    .topics {
+      padding: 56px 64px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .topics-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .topics-list {
+      display: flex;
+      gap: 12px;
+    }
+
+    .topic-btn {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      color: var(--gray);
+      transition: all 0.2s;
+    }
+
+    .topic-btn:hover, .topic-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    /* ─── ARTICLES GRID ─── */
+    .articles {
+      padding: 72px 64px;
+    }
+
+    .articles-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .article-card {
+      cursor: pointer;
+    }
+
+    .article-thumb {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: var(--cream-dark);
+    }
+
+    .article-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .article-card:hover .article-thumb img { transform: scale(1.04); }
+
+    .article-tag {
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .article-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    .article-card p {
+      font-size: 0.825rem;
+      color: var(--gray);
+      margin-bottom: 14px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    .short-meta {
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    /* ─── LONG FORM ─── */
-    .longform-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .longform-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.2s;
-    }
-
-    .longform-card:hover { border-color: var(--accent-dim); }
-
-    .longform-thumb {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: var(--border);
-    }
-
-    .longform-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .longform-info { padding: 18px; }
-
-    .longform-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      line-height: 1.4;
-      margin-bottom: 10px;
-    }
-
-    .longform-meta {
+    .article-date {
       font-size: 0.75rem;
-      color: var(--muted);
-      display: flex;
-      gap: 12px;
+      color: var(--gray-light);
     }
 
-    .tag {
-      display: inline-block;
-      background: var(--border);
-      color: var(--muted);
-      font-size: 0.65rem;
-      padding: 3px 8px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    /* ─── NEWSLETTER ─── */
+    .newsletter {
+      background: var(--black);
+      color: var(--cream);
+      padding: 80px 64px;
+      text-align: center;
     }
+
+    .newsletter h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      color: var(--cream);
+    }
+
+    .newsletter p {
+      font-size: 0.9rem;
+      color: var(--gray-light);
+      max-width: 420px;
+      margin: 0 auto 32px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 14px 20px;
+      background: var(--charcoal);
+      border: 1px solid var(--charcoal);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .newsletter-form input::placeholder { color: var(--gray); }
+
+    .newsletter-form button {
+      padding: 14px 24px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      border-radius: 0 2px 2px 0;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form button:hover { background: var(--gold-dark); }
 
     /* ─── FOOTER ─── */
     footer {
+      background: var(--cream-dark);
       border-top: 1px solid var(--border);
-      padding: 48px;
+      padding: 64px;
+    }
+
+    .footer-top {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 48px;
+      margin-bottom: 56px;
     }
 
-    .footer-brand .nav-logo { font-size: 1.1rem; margin-bottom: 12px; display: block; }
-    .footer-brand p { font-size: 0.8125rem; color: var(--muted); line-height: 1.7; max-width: 280px; }
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 14px;
+    }
 
-    .footer-links h4 {
+    .footer-brand h3 span { color: var(--gold); }
+
+    .footer-brand p {
+      font-size: 0.825rem;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
       font-size: 0.7rem;
-      text-transform: uppercase;
       letter-spacing: 1.5px;
-      color: var(--muted);
-      margin-bottom: 16px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 18px;
     }
 
-    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a { font-size: 0.8125rem; color: var(--muted); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--accent); }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-col a {
+      font-size: 0.825rem;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--gold-dark); }
 
     .footer-bottom {
       border-top: 1px solid var(--border);
-      margin-top: 40px;
       padding-top: 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      grid-column: 1 / -1;
     }
 
-    .footer-bottom span { font-size: 0.75rem; color: var(--muted); }
+    .footer-bottom span {
+      font-size: 0.75rem;
+      color: var(--gray-light);
+    }
+
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    .footer-bottom-links a {
+      font-size: 0.75rem;
+      color: var(--gray-light);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover { color: var(--gold-dark); }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      nav { padding: 20px 24px; }
-      .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 40px; }
+      .topbar { padding: 0 24px; }
+      .topbar-nav { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-image { display: none; }
+      .hero-content { border-right: none; padding: 48px 24px; }
       .hero h1 { font-size: 2.4rem; }
-      .shorts-grid { grid-template-columns: repeat(2, 1fr); }
-      .longform-grid { grid-template-columns: 1fr; }
-      .stats-bar { padding: 0 24px; }
-      .section { padding: 48px 24px; }
-      footer { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .featured { padding: 48px 24px; }
+      .featured-grid { grid-template-columns: 1fr; }
+      .topics { padding: 40px 24px; flex-wrap: wrap; }
+      .articles { padding: 48px 24px; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .newsletter { padding: 56px 24px; }
+      footer { padding: 48px 24px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
-<nav>
-  <a href="#" class="nav-logo">Lina Kariim</a>
-  <ul class="nav-links">
-    <li><a href="#shorts">Shorts</a></li>
-    <li><a href="#longform">Video Panjang</a></li>
-    <li><a href="https://catatanalin.wordpress.com" target="_blank">Blog</a></li>
-    <li><a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a></li>
-  </ul>
-</nav>
+<!-- ─── TOP BAR ─── -->
+<header class="topbar">
+  <a href="#" class="topbar-logo">Lina <span>Kariim</span></a>
+
+  <nav class="topbar-nav">
+    <a href="#articles">Artikel</a>
+    <a href="#about">Tentang</a>
+    <a href="https://catatanalin.wordpress.com" target="_blank">Blog</a>
+    <a href="#topics">Topik</a>
+  </nav>
+
+  <div class="topbar-social">
+    <a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@linakariima" target="_blank">TikTok</a>
+  </div>
+</header>
 
 <!-- ─── HERO ─── -->
 <section class="hero">
-  <div class="hero-text">
+  <div class="hero-content">
     <p class="hero-eyebrow">Seni &middot; Sejarah &middot; Filsafat</p>
     <h1>Dari <em>Lukisan</em> ke <em>Hati</em></h1>
-    <p class="hero-desc">
-      Konten seni, sejarah, dan filsafat dalam bahasa Indonesia.
-      Kita jelajahi lukisan, tokoh, dan cerita yang tersembunyi di balik kanvas —
-      untukmu yang percaya bahwa setiap goresan punya makna.
-    </p>
+    <p>Setiap goresan punya cerita. Setiap lukisan punya jiwa. Di sini kita jelajahi seni, tokoh sejarah, dan pemikiran filsafat — dengan cara yang tidak biasa.</p>
     <div class="hero-actions">
-      <a href="https://www.youtube.com/@linakariima" target="_blank" class="btn-primary">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="currentColor" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-        ChANNEL
-      </a>
-      <a href="https://catatanalin.wordpress.com" target="_blank" class="btn-ghost">
-        BLOG SAYA
-      </a>
+      <a href="#articles" class="btn-gold">Baca Artikel</a>
+      <a href="https://www.youtube.com/@linakariima" target="_blank" class="btn-outline">YouTube</a>
     </div>
   </div>
-
-  <div class="hero-visual">
-    <!-- Replace VIDEO_ID with actual latest video ID -->
-    <iframe
-      src="https://www.youtube.com/embed/?listType=user_uploads&list=UCfQjd3aCNnUMf1g7YD-zVNg"
-      title="Lina Kariim — Latest Video"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=85" alt="Lukisan abstrak emas dan cream di kanvas">
+    <div class="hero-image-overlay"></div>
   </div>
 </section>
 
-<!-- ─── STATS ─── -->
-<div class="stats-bar">
-  <div class="stat-item">
-    <span class="stat-number">6.5K</span>
-    <span class="stat-label">Subscribers</span>
+<!-- ─── FEATURED ─── -->
+<section class="featured" id="articles">
+  <p class="section-label">Artikel Pilihan</p>
+
+  <div class="featured-grid">
+    <article class="featured-main" onclick="location.href='article.html'">
+      <div class="featured-main-thumb">
+        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80" alt="Kedokteran kuno dalam lukisan">
+      </div>
+      <span class="featured-main-tag">Seni &amp; Sejarah</span>
+      <h2>Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan</h2>
+      <p>Trepanasi, kursi pengikat, dan operasi sebagai tontonan publik — menjelajahi praktik kedokteran mengerikan yang diabadikan dalam lukisan sejarah.</p>
+    </article>
+
+    <div class="featured-side">
+      <article class="featured-side-item" onclick="location.href='artikel-2.html'" style="cursor:pointer">
+        <span class="tag">Seni</span>
+        <h3>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
+        <p>5 min baca</p>
+      </article>
+      <article class="featured-side-item" onclick="location.href='artikel-3.html'" style="cursor:pointer">
+        <span class="tag">Sejarah</span>
+        <h3>Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
+        <p>5 min baca</p>
+      </article>
+      <article class="featured-side-item" onclick="location.href='artikel-4.html'" style="cursor:pointer">
+        <span class="tag">Filsafat</span>
+        <h3>Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</h3>
+        <p>4 min baca</p>
+      </article>
+    </div>
   </div>
-  <div class="stat-item">
-    <span class="stat-number">128</span>
-    <span class="stat-label">Shorts</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-number">678K</span>
-    <span class="stat-label">Peak Views</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-number">3</span>
-    <span class="stat-label">Video Panjang</span>
+</section>
+
+<!-- ─── TOPICS ─── -->
+<div class="topics" id="topics">
+  <span class="topics-label">Telusuri:</span>
+  <div class="topics-list">
+    <button class="topic-btn active">Semua</button>
+    <button class="topic-btn">Seni</button>
+    <button class="topic-btn">Sejarah</button>
+    <button class="topic-btn">Filsafat</button>
   </div>
 </div>
 
-<!-- ─── SHORTS ─── -->
-<section class="section" id="shorts">
-  <div class="section-header">
-    <h2 class="section-title">Shorts</h2>
-    <a href="https://www.youtube.com/@linakariima/shorts" target="_blank" class="section-link">Lihat semua &rarr;</a>
+<!-- ─── ARTICLES GRID ─── -->
+<section class="articles">
+  <div class="articles-header">
+    <p class="section-label" style="margin-bottom: 0">Artikel Terbaru</p>
+    <a href="#" style="font-size:0.8rem; color:var(--gold-dark); letter-spacing:0.5px;">Lihat semua &rarr;</a>
   </div>
 
-  <div class="shorts-grid">
+  <div class="articles-grid">
 
-    <a href="#" class="short-card">
-      <div class="short-thumb">
-        <img src="https://picsum.photos/seed/lk1/270/480" alt="Short thumbnail" loading="lazy">
-        <span class="short-duration">0:58</span>
+    <article class="article-card" onclick="location.href='artikel-2.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&q=80" alt="Seni Barok chiaroscuro">
       </div>
-      <div class="short-info">
-        <p class="short-title">Lukisan yang Mengubah Sejarah Seni</p>
-        <p class="short-meta">678K views &middot; 3 hari lalu</p>
-      </div>
-    </a>
+      <span class="article-tag">Seni</span>
+      <h3>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
+      <p>Pelajari bagaimana pelukis Barok menggunakan chiaroscuro untuk menceritakan drama yang intens dalam setiap karya mereka.</p>
+      <span class="article-date">8 Mei 2026</span>
+    </article>
 
-    <a href="#" class="short-card">
-      <div class="short-thumb">
-        <img src="https://picsum.photos/seed/lk2/270/480" alt="Short thumbnail" loading="lazy">
-        <span class="short-duration">1:02</span>
+    <article class="article-card" onclick="location.href='artikel-3.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=80" alt="Renaissance wanita pelukis">
       </div>
-      <div class="short-info">
-        <p class="short-title">Tokoh Filsuf yang Jarang Diketahui</p>
-        <p class="short-meta">234K views &middot; 1 minggu lalu</p>
-      </div>
-    </a>
+      <span class="article-tag">Sejarah</span>
+      <h3>Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
+      <p>Di balik setiap karya masterpiece, ada nama yang jarang disebut. Kami explore peran perempuan dalam era keemasan seni.</p>
+      <span class="article-date">5 Mei 2026</span>
+    </article>
 
-    <a href="#" class="short-card">
-      <div class="short-thumb">
-        <img src="https://picsum.photos/seed/lk3/270/480" alt="Short thumbnail" loading="lazy">
-        <span class="short-duration">0:45</span>
+    <article class="article-card" onclick="location.href='artikel-4.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&q=80" alt="Filsafat keindahan">
       </div>
-      <div class="short-info">
-        <p class="short-title">5 Lukisan dengan Pesan Tersembunyi</p>
-        <p class="short-meta">445K views &middot; 2 minggu lalu</p>
-      </div>
-    </a>
+      <span class="article-tag">Filsafat</span>
+      <h3>Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</h3>
+      <p>Pertanyaan klasik yang tetap relevan: apa hubungan antara keindahan, kebaikan, dan makna hidup?</p>
+      <span class="article-date">2 Mei 2026</span>
+    </article>
 
-    <a href="#" class="short-card">
-      <div class="short-thumb">
-        <img src="https://picsum.photos/seed/lk4/270/480" alt="Short thumbnail" loading="lazy">
-        <span class="short-duration">1:11</span>
+    <article class="article-card" onclick="location.href='artikel-5.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=600&q=80" alt="Teknik impasto cat minyak">
       </div>
-      <div class="short-info">
-        <p class="short-title">Sejarah yang Tidak Diajarkan di Sekolah</p>
-        <p class="short-meta">189K views &middot; 3 minggu lalu</p>
+      <span class="article-tag">Seni</span>
+      <h3>Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</h3>
+      <p>Bagaimana Van Gogh dan para master menggunakan impasto untuk menciptakan dimensi dan emosi dalam lukisan mereka.</p>
+      <span class="article-date">28 April 2026</span>
+    </article>
+
+    <article class="article-card" onclick="location.href='artikel-6.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=600&q=80" alt="Seni sacra katedral">
       </div>
-    </a>
+      <span class="article-tag">Sejarah</span>
+      <h3>Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa</h3>
+      <p>Seni religi berhasil bertransisi dari katedral gothic hingga museum modern — bagaimana dan mengapa?</p>
+      <span class="article-date">24 April 2026</span>
+    </article>
+
+    <article class="article-card" onclick="location.href='artikel-7.html'" style="cursor:pointer">
+      <div class="article-thumb">
+        <img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=600&q=80" alt="Simbolisme seni mistis">
+      </div>
+      <span class="article-tag">Filsafat</span>
+      <h3>Simbolismus: Ketika Seni Menjadi Meditasi</h3>
+      <p>Era simbolis yang mistis — bagaimana seniman akhir abad ke-19 mengekspresikan hal-hal yang tidak bisa diucapkan.</p>
+      <span class="article-date">20 April 2026</span>
+    </article>
 
   </div>
 </section>
 
-<!-- ─── LONG FORM ─── -->
-<section class="section" id="longform">
-  <div class="section-header">
-    <h2 class="section-title">Video Panjang</h2>
-    <a href="https://www.youtube.com/@linakariima/videos" target="_blank" class="section-link">Lihat semua &rarr;</a>
-  </div>
-
-  <div class="longform-grid">
-
-    <a href="#" class="longform-card">
-      <div class="longform-thumb">
-        <img src="https://picsum.photos/seed/lf1/640/360" alt="Video thumbnail" loading="lazy">
-      </div>
-      <div class="longform-info">
-        <h3 class="longform-title">Goresan Terakhir: Kisah di Balik Lukisan Terkenal</h3>
-        <div class="longform-meta">
-          <span>4:32</span>
-          <span>23K views</span>
-          <span class="tag">Seni</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="#" class="longform-card">
-      <div class="longform-thumb">
-        <img src="https://picsum.photos/seed/lf2/640/360" alt="Video thumbnail" loading="lazy">
-      </div>
-      <div class="longform-info">
-        <h3 class="longform-title">Filsuf yang Hidup dari Kesusastraan</h3>
-        <div class="longform-meta">
-          <span>3:15</span>
-          <span>8.2K views</span>
-          <span class="tag">Filsafat</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="#" class="longform-card">
-      <div class="longform-thumb">
-        <img src="https://picsum.photos/seed/lf3/640/360" alt="Video thumbnail" loading="lazy">
-      </div>
-      <div class="longform-info">
-        <h3 class="longform-title">Dari Galeri ke Hati: Lukisan yang Menyentuh Jiwa</h3>
-        <div class="longform-meta">
-          <span>5:01</span>
-          <span>12K views</span>
-          <span class="tag">Sejarah</span>
-        </div>
-      </div>
-    </a>
-
-  </div>
+<!-- ─── NEWSLETTER ─── -->
+<section class="newsletter">
+  <h2>Ikuti Cerita Baru</h2>
+  <p>Setiap minggu, satu artikel baru tentang seni, sejarah, dan filsafat — langsung ke inbox kamu.</p>
+  <form class="newsletter-form" onsubmit="return false;">
+    <input type="email" placeholder="Email kamu...">
+    <button type="submit">Berlangganan</button>
+  </form>
 </section>
 
 <!-- ─── FOOTER ─── -->
 <footer>
-  <div class="footer-brand">
-    <a href="#" class="nav-logo">Lina Kariim</a>
-    <p>Konten seni, sejarah, dan filsafat dalam bahasa Indonesia. Dari lukisan ke cerita, dari galeri ke hati.</p>
-  </div>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Lina <span>Kariim</span></h3>
+      <p>Konten seni, sejarah, dan filsafat dalam bahasa Indonesia. Setiap goresan punya makna — mari kita explore bersama.</p>
+    </div>
 
-  <div class="footer-links">
-    <h4>Konten</h4>
-    <ul>
-      <li><a href="#shorts">Shorts</a></li>
-      <li><a href="#longform">Video Panjang</a></li>
-      <li><a href="https://www.youtube.com/@linakariima/channels" target="_blank">Playlist</a></li>
-    </ul>
-  </div>
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="#articles">Artikel</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#topics">Topik</a></li>
+      </ul>
+    </div>
 
-  <div class="footer-links">
-    <h4>Links</h4>
-    <ul>
-      <li><a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a></li>
-      <li><a href="https://catatanalin.wordpress.com" target="_blank">Blog</a></li>
-      <li><a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a></li>
-    </ul>
+    <div class="footer-col">
+      <h4>Topik</h4>
+      <ul>
+        <li><a href="#">Seni</a></li>
+        <li><a href="#">Sejarah</a></li>
+        <li><a href="#">Filsafat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Sosial</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a></li>
+        <li><a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@linakariima" target="_blank">TikTok</a></li>
+        <li><a href="https://catatanalin.wordpress.com" target="_blank">Blog</a></li>
+      </ul>
+    </div>
   </div>
 
   <div class="footer-bottom">
-    <span>&copy; 2026 Lina Kariim. Semua hak dilindungi.</span>
-    <span>Dibuat dengan ❤️ untuk lukisan dan sejarah</span>
+    <span>&copy; 2026 Lina Kariim</span>
+    <div class="footer-bottom-links">
+      <a href="#">Privasi</a>
+      <a href="#">Tentang</a>
+      <a href="#">Kontak</a>
+    </div>
   </div>
 </footer>
 
