@@ -122,10 +122,16 @@
       line-height: 1.75;
     }
 
-    /* ─── FILTER BAR ─── */
-    .filter-bar {
-      padding: 28px 64px;
+    /* ─── FILTER SECTION ─── */
+    .filter-section {
+      padding: 24px 64px;
       border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-row {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -137,11 +143,11 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gray);
-      margin-right: 8px;
+      min-width: 72px;
     }
 
     .filter-btn {
-      padding: 8px 20px;
+      padding: 7px 18px;
       border: 1px solid var(--border);
       border-radius: 2px;
       font-size: 0.75rem;
@@ -162,26 +168,26 @@
 
     /* ─── RESULTS INFO ─── */
     .results-info {
-      padding: 20px 64px 0;
+      padding: 16px 64px 0;
       font-size: 0.8rem;
       color: var(--gray-light);
     }
 
     /* ─── ARCHIVE LIST ─── */
     .archive {
-      padding: 32px 64px 80px;
+      padding: 24px 64px 80px;
     }
 
-    .month-group { margin-bottom: 56px; }
+    .month-group { margin-bottom: 48px; }
 
     .month-label {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
       font-weight: 600;
       color: var(--black);
-      padding-bottom: 16px;
+      padding-bottom: 14px;
       border-bottom: 2px solid var(--gold);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       display: inline-block;
     }
 
@@ -189,10 +195,10 @@
 
     .article-row {
       display: grid;
-      grid-template-columns: 140px 1fr auto;
-      gap: 32px;
-      align-items: start;
-      padding: 20px 0;
+      grid-template-columns: 72px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border);
       cursor: pointer;
       transition: background 0.15s;
@@ -202,34 +208,43 @@
 
     .article-row:hover { background: var(--cream-dark); margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
 
+    .article-row-thumb {
+      width: 72px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 2px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
     .article-row-date {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--gray-light);
-      padding-top: 3px;
+      margin-top: 2px;
     }
 
     .article-row-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 400;
       line-height: 1.3;
       color: var(--black);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .article-row-excerpt {
-      font-size: 0.825rem;
+      font-size: 0.8rem;
       color: var(--gray);
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     .article-row-tag {
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--gold-dark);
       background: var(--gold-light);
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 2px;
       white-space: nowrap;
       margin-top: 4px;
@@ -287,11 +302,11 @@
       .topbar-nav { display: none; }
       .page-header { padding: 48px 24px 36px; }
       .page-header h1 { font-size: 2.2rem; }
-      .filter-bar { padding: 20px 24px; }
+      .filter-section { padding: 20px 24px; }
       .results-info { padding: 16px 24px 0; }
       .archive { padding: 24px 24px 64px; }
-      .article-row { grid-template-columns: 1fr; gap: 8px; }
-      .article-row-tag { align-self: start; }
+      .article-row { grid-template-columns: 56px 1fr; gap: 16px; }
+      .article-row-tag { display: none; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
     }
   </style>
@@ -323,13 +338,22 @@
   <p>Semua tulisan tentang seni, sejarah, dan filsafat — dari yang paling lama hingga paling baru.</p>
 </section>
 
-<!-- ─── FILTER BAR ─── -->
-<div class="filter-bar">
-  <span class="filter-label">Kategori:</span>
-  <button class="filter-btn active" data-filter="all">Semua</button>
-  <button class="filter-btn" data-filter="Seni">Seni</button>
-  <button class="filter-btn" data-filter="Sejarah">Sejarah</button>
-  <button class="filter-btn" data-filter="Filsafat">Filsafat</button>
+<!-- ─── FILTER SECTION ─── -->
+<div class="filter-section">
+  <div class="filter-row">
+    <span class="filter-label">Kategori:</span>
+    <button class="filter-btn active" data-filter-cat="all">Semua</button>
+    <button class="filter-btn" data-filter-cat="Seni">Seni</button>
+    <button class="filter-btn" data-filter-cat="Sejarah">Sejarah</button>
+    <button class="filter-btn" data-filter-cat="Filsafat">Filsafat</button>
+    <button class="filter-btn" data-filter-cat="Opini">Opini</button>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Bulan:</span>
+    <button class="filter-btn active" data-filter-month="all">Semua</button>
+    <button class="filter-btn" data-filter-month="Mei 2026">Mei 2026</button>
+    <button class="filter-btn" data-filter-month="April 2026">April 2026</button>
+  </div>
 </div>
 
 <!-- ─── RESULTS INFO ─── -->
@@ -344,7 +368,7 @@
     <div class="article-list">
 
       <div class="article-row" onclick="location.href='kedokteran-aneh-dalam-lukisan.html'">
-        <span class="article-row-date">8 Mei 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=200&q=75" alt="Kedokteran kuno">
         <div>
           <h3 class="article-row-title">Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan</h3>
           <p class="article-row-excerpt">Trepanasi, kursi pengikat, dan operasi sebagai tontonan publik.</p>
@@ -353,7 +377,7 @@
       </div>
 
       <div class="article-row" onclick="location.href='seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html'">
-        <span class="article-row-date">8 Mei 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1578321272176-b7bbc0679853?w=200&q=75" alt="Seni Barok">
         <div>
           <h3 class="article-row-title">Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
           <p class="article-row-excerpt">Bagaimana pelukis Barok menggunakan chiaroscuro untuk menceritakan drama.</p>
@@ -362,7 +386,7 @@
       </div>
 
       <div class="article-row" onclick="location.href='renaissance-yang-terlupakan-peran-wanita-dalam-seni.html'">
-        <span class="article-row-date">5 Mei 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=200&q=75" alt="Renaissance">
         <div>
           <h3 class="article-row-title">Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
           <p class="article-row-excerpt">Sofonisba Anguissola, Properzia de Rossi, dan wanita lain yang membentuk era keemasan.</p>
@@ -371,7 +395,7 @@
       </div>
 
       <div class="article-row" onclick="location.href='beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik.html'">
-        <span class="article-row-date">2 Mei 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=200&q=75" alt="Filsafat keindahan">
         <div>
           <h3 class="article-row-title">Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</h3>
           <p class="article-row-excerpt">Apa hubungan antara keindahan, kebaikan, dan makna hidup?</p>
@@ -388,7 +412,7 @@
     <div class="article-list">
 
       <div class="article-row" onclick="location.href='mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna.html'">
-        <span class="article-row-date">28 April 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=200&q=75" alt="Teknik impasto">
         <div>
           <h3 class="article-row-title">Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</h3>
           <p class="article-row-excerpt">Van Gogh dan para master menggunakan impasto untuk dimensi dan emosi.</p>
@@ -397,7 +421,7 @@
       </div>
 
       <div class="article-row" onclick="location.href='dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa.html'">
-        <span class="article-row-date">24 April 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=200&q=75" alt="Seni sacra">
         <div>
           <h3 class="article-row-title">Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa</h3>
           <p class="article-row-excerpt">Seni religi bertransisi dari katedral gothic hingga museum modern.</p>
@@ -406,7 +430,7 @@
       </div>
 
       <div class="article-row" onclick="location.href='simbolismus-ketika-seni-menjadi-meditasi.html'">
-        <span class="article-row-date">20 April 2026</span>
+        <img class="article-row-thumb" src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=200&q=75" alt="Simbolisme">
         <div>
           <h3 class="article-row-title">Simbolismus: Ketika Seni Menjadi Meditasi</h3>
           <p class="article-row-excerpt">Era simbolis yang mistis mengekspresikan hal-hal yang tidak bisa diucapkan.</p>
@@ -417,11 +441,11 @@
     </div>
   </div>
 
-  <!-- EMPTY STATE (hidden by default) -->
+  <!-- EMPTY STATE -->
   <div class="empty-state" id="empty-state" style="display:none">
     <div class="empty-state-icon">&#128269;</div>
     <h2>Tidak ada artikel</h2>
-    <p>Coba pilih kategori lain.</p>
+    <p>Coba pilih filter lain.</p>
   </div>
 
 </section>
@@ -438,64 +462,90 @@
 </footer>
 
 <script>
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const catBtns    = document.querySelectorAll('[data-filter-cat]');
+  const monthBtns  = document.querySelectorAll('[data-filter-month]');
   const monthGroups = document.querySelectorAll('.month-group');
   const emptyState = document.getElementById('empty-state');
   const resultsInfo = document.getElementById('results-info');
 
-  let activeFilter = 'all';
+  let activeCat   = 'all';
+  let activeMonth = 'all';
 
-  function applyFilter(filter) {
-    activeFilter = filter;
+  function matchesCat(tag) {
+    if (activeCat === 'all') return true;
+    if (activeCat === 'Seni') return tag === 'Seni' || tag === 'Seni & Sejarah';
+    return tag === activeCat;
+  }
 
-    filterBtns.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.filter === filter);
-    });
+  function applyFilters() {
+    // Update active states
+    catBtns.forEach(b => b.classList.toggle('active', b.dataset.filterCat === activeCat));
+    monthBtns.forEach(b => b.classList.toggle('active', b.dataset.filterMonth === activeMonth));
 
     let totalVisible = 0;
 
     monthGroups.forEach(group => {
-      const rows = group.querySelectorAll('.article-row');
+      const month    = group.dataset.month;
+      const rows     = group.querySelectorAll('.article-row');
       let groupVisible = 0;
 
       rows.forEach(row => {
         const tag = row.querySelector('.article-row-tag').textContent.trim();
-        // Normalize: "Seni & Sejarah" includes "Seni"
-        const isMatch = filter === 'all' ||
-          tag === filter ||
-          (filter === 'Seni' && tag === 'Seni & Sejarah');
-        row.style.display = isMatch ? '' : 'none';
-        if (isMatch) groupVisible++;
+        const monthMatch = activeMonth === 'all' || month === activeMonth;
+        const catMatch   = matchesCat(tag);
+        row.style.display = (monthMatch && catMatch) ? '' : 'none';
+        if (monthMatch && catMatch) groupVisible++;
       });
 
-      // Hide month group if all its rows are hidden
       group.style.display = groupVisible > 0 ? '' : 'none';
       totalVisible += groupVisible;
     });
 
-    // Empty state
     emptyState.style.display = totalVisible === 0 ? 'block' : 'none';
     document.getElementById('archive').style.display = totalVisible === 0 ? 'none' : '';
 
-    // Results info
-    if (filter === 'all') {
-      resultsInfo.textContent = 'Menampilkan 7 artikel';
+    // Build results text
+    let parts = [];
+    if (activeCat !== 'all') parts.push(`kategori "${activeCat}"`);
+    if (activeMonth !== 'all') parts.push(activeMonth);
+    if (parts.length === 0) {
+      resultsInfo.textContent = `Menampilkan ${totalVisible} artikel`;
     } else {
-      resultsInfo.textContent = `Menampilkan ${totalVisible} artikel kategori "${filter}"`;
+      resultsInfo.textContent = `Menampilkan ${totalVisible} artikel ${parts.join(' · ')}`;
     }
   }
 
-  // Read ?cat= param on load so footer links work
+  // URL param support: ?cat=Seni&month=April+2026
   const params = new URLSearchParams(window.location.search);
-  const catParam = params.get('cat');
-  if (catParam) applyFilter(catParam);
+  if (params.get('cat'))   activeCat   = params.get('cat');
+  if (params.get('month')) activeMonth = params.get('month');
 
-  filterBtns.forEach(btn => {
+  catBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      window.history.pushState({}, '', btn.dataset.filter === 'all' ? 'arsip.html' : 'arsip.html?cat=' + encodeURIComponent(btn.dataset.filter));
-      applyFilter(btn.dataset.filter);
+      activeCat = btn.dataset.filterCat;
+      updateURL();
+      applyFilters();
     });
   });
+
+  monthBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeMonth = btn.dataset.filterMonth;
+      updateURL();
+      applyFilters();
+    });
+  });
+
+  function updateURL() {
+    const u = new URL(window.location);
+    if (activeCat   === 'all') u.searchParams.delete('cat');
+    else u.searchParams.set('cat', activeCat);
+    if (activeMonth === 'all') u.searchParams.delete('month');
+    else u.searchParams.set('month', activeMonth);
+    window.history.pushState({}, '', u);
+  }
+
+  applyFilters();
 </script>
 
 </body>
