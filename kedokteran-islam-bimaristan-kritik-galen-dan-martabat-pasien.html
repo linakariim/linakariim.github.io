@@ -8,7 +8,7 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien — Lina Kariim</title>
-  
+
   <link rel="canonical" href="https://linakariim.github.io/kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien.html">
   <meta property="og:title" content="Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien — Lina Kariim">
   <meta property="og:description" content="Bimaristan, kritik terhadap Galen, dan gagasan bahwa pasien adalah manusia yang harus dijaga martabatnya.">
@@ -36,7 +36,7 @@
 </script>
   <meta name="description" content="Bimaristan, kritik terhadap Galen, dan gagasan bahwa pasien adalah manusia yang harus dijaga martabatnya.">
   <meta name="author" content="Lina Kariim">
-  <meta name="tags" content="sejarah, kedokteran, islam, bimaristan, galen">
+  <meta name="keywords" content="sejarah, kedokteran, islam, bimaristan, galen">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -171,6 +171,14 @@
       line-height: 1.85;
     }
 
+    .article-body p .citation {
+      color: var(--gold-dark);
+      font-size: 0.75rem;
+      vertical-align: super;
+      font-weight: 500;
+      cursor: help;
+    }
+
     .article-body h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.7rem;
@@ -178,38 +186,6 @@
       color: var(--black);
       margin: 48px 0 20px;
       letter-spacing: -0.3px;
-    }
-
-    .article-body blockquote {
-      border-left: 3px solid var(--gold);
-      padding: 4px 0 4px 28px;
-      margin: 36px 0;
-    }
-
-    .article-body blockquote p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--gray);
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-
-    .article-body figure {
-      margin: 40px 0;
-    }
-
-    .article-body figure img {
-      width: 100%;
-      border-radius: 2px;
-    }
-
-    .article-body figcaption {
-      font-size: 0.78rem;
-      color: var(--gray-light);
-      text-align: center;
-      margin-top: 12px;
-      font-style: italic;
     }
 
     .sources {
@@ -228,26 +204,35 @@
       margin-bottom: 16px;
     }
 
-    .sources ul {
+    .sources ol {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      counter-reset: source-counter;
     }
 
     .sources li {
       font-size: 0.825rem;
       color: var(--gray);
       line-height: 1.6;
-      padding-left: 16px;
-      position: relative;
+      padding-left: 0;
+      counter-increment: source-counter;
+      display: flex;
+      gap: 10px;
     }
 
     .sources li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
+      content: '[' counter(source-counter) ']';
       color: var(--gold-dark);
+      font-weight: 500;
+      min-width: 24px;
+      flex-shrink: 0;
+    }
+
+    .sources li a {
+      color: var(--gold-dark);
+      word-break: break-all;
     }
 
     .share-section {
@@ -292,116 +277,6 @@
       color: var(--gold-dark);
     }
 
-    .video-section {
-      max-width: 680px;
-      margin: 56px auto 0;
-      padding: 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .video-section-label {
-      display: block;
-      font-size: 0.65rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 12px;
-    }
-
-    .video-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--black);
-      margin-bottom: 20px;
-    }
-
-    .video-section .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      border-radius: 2px;
-      overflow: hidden;
-      background: var(--charcoal);
-    }
-
-    .video-section .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .related {
-      background: var(--cream-dark);
-      padding: 64px;
-      border-top: 1px solid var(--border);
-    }
-
-    .related-header {
-      max-width: 760px;
-      margin: 0 auto 32px;
-    }
-
-    .related-header h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--black);
-    }
-
-    .related-grid {
-      max-width: 760px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .related-card {
-      background: var(--cream);
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      transition: border-color 0.2s;
-      display: block;
-    }
-
-    .related-card:hover { border-color: var(--gold-light); }
-
-    .related-thumb {
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: var(--border);
-    }
-
-    .related-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .related-info { padding: 20px; }
-
-    .related-tag {
-      font-size: 0.65rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .related-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.3;
-      color: var(--black);
-    }
-
     footer {
       background: var(--cream-dark);
       border-top: 1px solid var(--border);
@@ -430,8 +305,6 @@
       .article-header h1 { font-size: 2rem; }
       .article-body { padding: 0 24px 56px; }
       .share-section { flex-direction: column; gap: 20px; }
-      .related { padding: 48px 24px; }
-      .related-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
     }
   </style>
@@ -476,66 +349,52 @@
 
 <p>Kalau sejarah kedokteran Barat sering diingat lewat ruang anatomi, pencurian mayat, dan operasi brutal, sejarah kedokteran Islam berkembang dengan arah yang agak berbeda.</p>
 
-<p>Di saat banyak wilayah Eropa medieval masih menganggap penyakit sebagai hukuman dosa atau urusan spiritual, dunia Islam pada masa Islamic Golden Age mulai membangun rumah sakit, menulis ensiklopedia medis, dan mengembangkan pengobatan berbasis observasi langsung terhadap pasien.</p>
+<p>Di saat banyak wilayah Eropa medieval masih menganggap penyakit sebagai hukuman dosa atau urusan spiritual, dunia Islam pada masa Islamic Golden Age mulai membangun rumah sakit, menulis ensiklopedia medis, dan mengembangkan pengobatan berbasis observasi langsung terhadap pasien.<span class="citation">[1]</span></p>
 
-<h2>Bimaristan, Rumah Sakit di Dunia Islam</h2>
-
-<p>Rumah sakit besar yang disebut bimaristan berdiri di kota-kota seperti Baghdad, Damaskus, dan Kairo. Salah satu yang paling terkenal adalah Bimaristan al-Nuri abad ke-12 di Damaskus.</p>
-
-<p>Tempat ini bukan sekadar ruang merawat orang sakit. Ada bangsal terpisah berdasarkan penyakit, apotek, perpustakaan medis, ruang belajar dokter, bahkan sistem pencatatan kondisi pasien. Banyak rumah sakit juga memberi makanan, pakaian, dan pengobatan gratis tanpa melihat status sosial atau agama pasien.</p>
+<p>Rumah sakit besar yang disebut bimaristan berdiri di kota-kota seperti Baghdad, Damaskus, dan Kairo. Salah satu yang paling terkenal adalah Bimaristan al-Nuri abad ke-12 di Damaskus.<span class="citation">[2]</span> Tempat ini bukan sekadar ruang merawat orang sakit. Ada bangsal terpisah berdasarkan penyakit, apotek, perpustakaan medis, ruang belajar dokter, bahkan sistem pencatatan kondisi pasien. Banyak rumah sakit juga memberi makanan, pakaian, dan pengobatan gratis tanpa melihat status sosial atau agama pasien.</p>
 
 <p>Dan mungkin yang paling menarik: pasien tetap dipandang sebagai manusia yang harus dijaga martabatnya.</p>
 
-<h2>Mengkritik Galen</h2>
-
-<p>Di saat Eropa masih sangat bergantung pada teori Galen tanpa banyak kritik, ilmuwan Muslim justru mulai mempertanyakan otoritas lama itu.</p>
-
-<p>Claudius Galen, dokter Romawi abad ke-2, mendominasi dunia medis selama lebih dari 1300 tahun. Masalahnya, banyak teori anatominya berasal dari pembedahan hewan, bukan manusia. Ia mengira rahang manusia terdiri dari dua bagian dan percaya ada lubang kecil di jantung yang memungkinkan darah berpindah antarventrikel.</p>
+<p>Di saat Eropa masih sangat bergantung pada teori Galen tanpa banyak kritik, ilmuwan Muslim justru mulai mempertanyakan otoritas lama itu. Claudius Galen, dokter Romawi abad ke-2, mendominasi dunia medis selama lebih dari 1300 tahun. Masalahnya, banyak teori anatominya berasal dari pembedahan hewan, bukan manusia. Ia mengira rahang manusia terdiri dari dua bagian dan percaya ada lubang kecil di jantung yang memungkinkan darah berpindah antarventrikel.<span class="citation">[3]</span></p>
 
 <p>Namun ilmuwan Muslim tidak hanya menerjemahkan Galen. Mereka mulai mengkritik dan memperbaikinya.</p>
 
-<h2>Al-Razi dan Kritik Berbasis Pengamatan</h2>
+<p>Dokter Persia Al-Razi, misalnya, dikenal menolak praktik medis berbasis takhayul dan lebih memilih observasi langsung terhadap gejala pasien.<span class="citation">[4]</span> Ia bahkan menulis buku Doubts About Galen, sebuah kritik terhadap teori medis kuno yang dianggap terlalu diterima begitu saja.<span class="citation">[5]</span> Ia juga menjadi salah satu tokoh pertama yang membedakan cacar dan campak secara ilmiah, serta menulis tentang etika medis: bahwa dokter memiliki tanggung jawab terhadap pasien, pasien terhadap dokter, dan dokter terhadap dirinya sendiri.<span class="citation">[6]</span></p>
 
-<p>Dokter Persia Al-Razi dikenal menolak praktik medis berbasis takhayul dan lebih memilih observasi langsung terhadap gejala pasien. Ia bahkan menulis buku Doubts About Galen, sebuah kritik terhadap teori medis kuno yang dianggap terlalu diterima begitu saja.</p>
+<p>Lalu ada Ibn Sina atau Avicenna dengan The Canon of Medicine, salah satu buku medis paling berpengaruh dalam sejarah.<span class="citation">[7]</span> Buku itu dipakai di universitas Eropa selama ratusan tahun. Yang menarik, Ibn Sina tidak hanya membahas anatomi dan obat-obatan. Ia juga menulis bahwa kondisi mental pasien memengaruhi kesehatan tubuhnya. Artinya, pasien tidak dipandang sekadar sebagai "tubuh yang rusak," tetapi manusia utuh dengan emosi dan pikiran.</p>
 
-<p>Ia juga menjadi salah satu tokoh pertama yang membedakan cacar dan campak secara ilmiah, serta menulis tentang etika medis: bahwa dokter memiliki tanggung jawab terhadap pasien, pasien terhadap dokter, dan dokter terhadap dirinya sendiri.</p>
+<p>Bahkan ketika dunia Islam masih dipengaruhi teori kuno seperti humoralisme Yunani, pendekatan mereka terhadap pasien sering kali terasa lebih manusiawi dibanding banyak praktik medis awal di Eropa.</p>
 
-<h2>Ibn Sina dan Canon of Medicine</h2>
+<p>Perdebatan besar memang masih ada soal apakah ilmuwan Muslim abad pertengahan melakukan diseksi manusia atau tidak. Hukum Islam awal tidak secara eksplisit melarang ataupun mengizinkannya.<span class="citation">[8]</span> Namun yang menarik, meski tanpa tradisi teater anatomi publik seperti di Eropa Renaissance, ilmuwan Muslim tetap berhasil mengoreksi kesalahan Galen lewat observasi langsung.</p>
 
-<p>Lalu ada Ibn Sina atau Avicenna dengan The Canon of Medicine, salah satu buku medis paling berpengaruh dalam sejarah. Buku itu dipakai di universitas Eropa selama ratusan tahun.</p>
+<p>Abd al-Latif al-Baghdadi, misalnya, mengamati ribuan korban kelaparan di Mesir sekitar tahun 1200 dan menyadari bahwa rahang manusia sebenarnya terdiri dari satu tulang utuh, bukan dua bagian seperti yang diajarkan Galen.<span class="citation">[9]</span></p>
 
-<p>Yang menarik, Ibn Sina tidak hanya membahas anatomi dan obat-obatan. Ia juga menulis bahwa kondisi mental pasien memengaruhi kesehatan tubuhnya. Artinya, pasien tidak dipandang sekadar sebagai "tubuh yang rusak," tetapi manusia utuh dengan emosi dan pikiran.</p>
+<p>Lalu ada Ibn al-Nafis, salah satu ilmuwan pertama yang menolak teori Galen tentang adanya lubang kecil di jantung. Ia menjelaskan bahwa darah bergerak melalui paru-paru sebelum kembali ke jantung, berabad-abad sebelum teori sirkulasi darah modern muncul di Eropa.<span class="citation">[10]</span></p>
 
-<h2>Mengoreksi Tanpa Diseksi</h2>
+<p>Kontrasnya terasa jelas jika dibandingkan dengan sebagian praktik Eropa pada periode yang sama. Ketika beberapa wilayah Eropa masih melakukan operasi tanpa anestesi, membedah tubuh dalam pertunjukan publik, dan menggunakan tubuh narapidana untuk ruang anatomi, banyak bimaristan Islam justru mulai mengembangkan etika medis, pendidikan dokter, hingga lisensi praktik.<span class="citation">[11]</span></p>
 
-<p>Perdebatan besar memang masih ada soal apakah ilmuwan Muslim abad pertengahan melakukan diseksi manusia atau tidak. Hukum Islam awal tidak secara eksplisit melarang ataupun mengizinkannya. Namun yang menarik, meski tanpa tradisi teater anatomi publik seperti di Eropa Renaissance, ilmuwan Muslim tetap berhasil mengoreksi kesalahan Galen lewat observasi langsung.</p>
-
-<p>Abd al-Latif al-Baghdadi, misalnya, mengamati ribuan korban kelaparan di Mesir sekitar tahun 1200 dan menyadari bahwa rahang manusia sebenarnya terdiri dari satu tulang utuh, bukan dua bagian seperti yang diajarkan Galen.</p>
-
-<p>Lalu ada Ibn al-Nafis, salah satu ilmuwan pertama yang menolak teori Galen tentang adanya lubang kecil di jantung. Ia menjelaskan bahwa darah bergerak melalui paru-paru sebelum kembali ke jantung, berabad-abad sebelum teori sirkulasi darah modern muncul di Eropa.</p>
-
-<h2>Martabat yang Terjaga</h2>
-
-<p>Kontrasnya terasa jelas jika dibandingkan dengan sebagian praktik Eropa pada periode yang sama. Ketika beberapa wilayah Eropa masih melakukan operasi tanpa anestesi, membedah tubuh dalam pertunjukan publik, dan menggunakan tubuh narapidana untuk ruang anatomi, banyak bimaristan Islam justru mulai mengembangkan etika medis, pendidikan dokter, hingga lisensi praktik.</p>
-
-<p>Beberapa rumah sakit bahkan menyediakan terapi musik untuk pasien gangguan mental dan memberi uang kepada pasien setelah sembuh agar mereka tidak langsung kembali bekerja dalam kondisi lemah.</p>
+<p>Beberapa rumah sakit bahkan menyediakan terapi musik untuk pasien gangguan mental dan memberi uang kepada pasien setelah sembuh agar mereka tidak langsung kembali bekerja dalam kondisi lemah.<span class="citation">[12]</span></p>
 
 <p>Tentu kedokteran Islam abad pertengahan tidak sempurna. Mereka tetap memiliki keterbatasan ilmu dan masih dipengaruhi teori kuno. Tetapi ada satu hal yang terasa berbeda: tubuh manusia belum sepenuhnya diperlakukan sebagai objek tontonan atau eksperimen.</p>
 
-<blockquote><p>Dan mungkin itu yang membuat sejarah kedokteran Islam sering terasa lebih "beradab" dibanding banyak praktik medis awal di Eropa. Karena di balik pencarian ilmu, masih ada gagasan bahwa merawat manusia juga berarti menjaga martabatnya.</p></blockquote>
+<p>Dan mungkin itu yang membuat sejarah kedokteran Islam sering terasa lebih "beradab" dibanding banyak praktik medis awal di Eropa. Karena di balik pencarian ilmu, masih ada gagasan bahwa merawat manusia juga berarti menjaga martabatnya.</p>
 
 <div class="sources">
   <h3>Sumber</h3>
-  <ul>
-    <li>Peter E. Pormann & Emilie Savage-Smith, Medieval Islamic Medicine</li>
+  <ol>
+    <li>Peter E. Pormann &amp; Emilie Savage-Smith, Medieval Islamic Medicine</li>
     <li>Ahmed Issa, History of Hospitals</li>
-    <li>NCBI — Galen's anatomical errors<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4290745/" style="color: var(--gold-dark);">ncbi.nlm.nih.gov/pmc/articles/PMC4290745/</a></li>
-    <li>NCBI — Doubts About Galen<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4205055/" style="color: var(--gold-dark);">ncbi.nlm.nih.gov/pmc/articles/PMC4205055/</a></li>
-    <li>ISHIM Journal — Abd al-Latif al-Baghdadi observations<br><a href="http://www.ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf" style="color: var(--gold-dark);">ishim.net</a></li>
-    <li>ISHIM Journal — Ibn al-Nafis and circulation<br><a href="http://www.ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf" style="color: var(--gold-dark);">ishim.net</a></li>
+    <li>NCBI — Galen's anatomical errors<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4290745/">ncbi.nlm.nih.gov/pmc/articles/PMC4290745/</a></li>
+    <li>Al-Razi medical writings</li>
+    <li>NCBI — Doubts About Galen<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4205055/">ncbi.nlm.nih.gov/pmc/articles/PMC4205055/</a></li>
+    <li>NCBI — Al-Razi and medical ethics<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4205055/">ncbi.nlm.nih.gov/pmc/articles/PMC4205055/</a></li>
+    <li>The Canon of Medicine — Ibn Sina<br><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4205055/">ncbi.nlm.nih.gov/pmc/articles/PMC4205055/</a></li>
+    <li>Oxford Journal of the History of Medicine<br><a href="https://academic.oup.com/jhmas/article-abstract/50/1/67/748066">academic.oup.com/jhmas/article-abstract/50/1/67/748066</a></li>
+    <li>ISHIM Journal — Abd al-Latif al-Baghdadi observations<br><a href="http://www.ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf">ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf</a></li>
+    <li>ISHIM Journal — Ibn al-Nafis and circulation<br><a href="http://www.ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf">ishim.net/ishimj/910/JISHIM%20NO.10%20PDF/01.pdf</a></li>
     <li>Howard R. Turner, Science in Medieval Islam</li>
     <li>Jonathan Lyons, The House of Wisdom</li>
-  </ul>
+  </ol>
 </div>
 
 </article>
