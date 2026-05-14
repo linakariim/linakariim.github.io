@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-32x32.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang — Lina Kariim</title>
+  <meta name="description" content="Lina Kariim — nama pena. Analis kebijakan dengan ketertarikan pada data. Menulis dan menggambar sebagai hobi, berbagi sebagai bentuk mengeksplorasi dunia.">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/39/Gustave_Moreau_-_Le_Cantique_des_cantiques.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original">
+  <meta property="og:url" content="https://linakariim.github.io/tentang.html">
+  <meta name="author" content="Lina Kariim">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #FAF7F2;
+      --cream-dark: #F0EBE3;
+      --gold: #C9A96E;
+      --gold-dark: #A8864A;
+      --gold-light: #EDD9A3;
+      --black: #0D0D0D;
+      --charcoal: #2A2A2A;
+      --gray: #6B6B6B;
+      --gray-light: #9A9A9A;
+      --border: #E5DDD0;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--black);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--black); }
+
+    .page-header {
+      text-align: center;
+      padding: 80px 64px 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .about-section {
+      margin-bottom: 48px;
+    }
+
+    .about-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-section p {
+      font-size: 1rem;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .about-section p:last-child { margin-bottom: 0; }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+
+    .contact-list .label {
+      font-weight: 500;
+      color: var(--gold-dark);
+      min-width: 80px;
+    }
+
+    .contact-list a {
+      color: var(--charcoal);
+      border-bottom: 1px solid var(--gold-light);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact-list a:hover {
+      color: var(--gold-dark);
+      border-color: var(--gold-dark);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    footer span { font-size: 0.825rem; color: var(--gray); }
+
+    .footer-links { display: flex; gap: 24px; }
+
+    .footer-links a {
+      font-size: 0.825rem;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold-dark); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .page-header { padding: 56px 24px 40px; }
+      .page-header h1 { font-size: 2.2rem; }
+      .about-content { padding: 48px 24px 72px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Lina <span>Kariim</span></a>
+  <ul class="nav-links">
+    <li><a href="arsip.html">Artikel</a></li>
+    <li><a href="tentang.html" class="active">Tentang</a></li>
+    <li><a href="arsip.html#topics">Topik</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <h1>Tentang</h1>
+  <p>Nama pena. Menulis karena dunia terlalu luas untuk disimpan sendiri.</p>
+</header>
+
+<div class="about-content">
+
+  <div class="about-section">
+    <h2>Lina Kariim</h2>
+    <p>Nama pena. Di dunia kerja, saya seorang analis kebijakan dengan ketertarikan kuat pada data dan sistem. Tapi di luar jam kerja, saya menggambar, menulis, dan menjelajahi dunia seni — terutama yang tidak bisa dijelaskan dengan kata-kata saja.</p>
+    <p>Website ini adalah tempat saya berbagi eksplorasi itu: tentang lukisan, tentang sejarah, tentang filsafat. Semua ditulis dalam Bahasa Indonesia, karena cara paling jujur untuk menulis adalah dalam bahasa yang kita rasa paling dalam.</p>
+  </div>
+
+  <div class="about-section">
+    <h2>Kontak</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="label">Email</span>
+        <a href="mailto:linakariim@gmail.com">linakariim@gmail.com</a>
+      </li>
+      <li>
+        <span class="label">Instagram</span>
+        <a href="https://www.instagram.com/serat.kalbu" target="_blank">@serat.kalbu</a>
+      </li>
+      <li>
+        <span class="label">YouTube</span>
+        <a href="https://www.youtube.com/@linakariima" target="_blank">@linakariima</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <span>&copy; 2026 Lina Kariim &middot; Dari Lukisan ke Hati</span>
+  <div class="footer-links">
+    <a href="index.html">Beranda</a>
+    <a href="arsip.html">Arsip</a>
+    <a href="tentang.html">Tentang</a>
+  </div>
+</footer>
+
+</body>
+</html>
