@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://linschq.github.io/linakariim/sitemap.xml
+Sitemap: https://linakariim.github.io/sitemap.xml
