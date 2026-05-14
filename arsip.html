@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsip — Lina Kariim</title>
+  <meta name="description" content="Semua artikel Lina Kariim tentang seni, sejarah, dan filsafat. Telusuri berdasarkan kategori atau waktu.">
+  <meta property="og:url" content="https://linakariim.github.io/arsip.html">
+  <meta name="theme-color" content="#C9A96E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #FAF7F2;
+      --cream-dark: #F0EBE3;
+      --gold: #C9A96E;
+      --gold-dark: #A8864A;
+      --gold-light: #EDD9A3;
+      --black: #0D0D0D;
+      --charcoal: #2A2A2A;
+      --gray: #6B6B6B;
+      --gray-light: #9A9A9A;
+      --border: #E5DDD0;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── TOP BAR ─── */
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      padding: 0 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .topbar-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .topbar-logo span { color: var(--gold); }
+
+    .topbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .topbar-nav a {
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .topbar-nav a:hover { color: var(--gold-dark); }
+    .topbar-nav a.active { color: var(--gold-dark); }
+
+    .topbar-social {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .topbar-social a {
+      color: var(--gray);
+      font-size: 0.75rem;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+
+    .topbar-social a:hover { color: var(--gold-dark); }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 72px 64px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--black);
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: var(--gray);
+      max-width: 480px;
+      line-height: 1.75;
+    }
+
+    /* ─── FILTER BAR ─── */
+    .filter-bar {
+      padding: 28px 64px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-right: 8px;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      color: var(--gray);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover { border-color: var(--gold); color: var(--gold-dark); }
+
+    .filter-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--white);
+    }
+
+    /* ─── RESULTS INFO ─── */
+    .results-info {
+      padding: 20px 64px 0;
+      font-size: 0.8rem;
+      color: var(--gray-light);
+    }
+
+    /* ─── ARCHIVE LIST ─── */
+    .archive {
+      padding: 32px 64px 80px;
+    }
+
+    .month-group { margin-bottom: 56px; }
+
+    .month-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--black);
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 28px;
+      display: inline-block;
+    }
+
+    .article-list { display: flex; flex-direction: column; gap: 0; }
+
+    .article-row {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      gap: 32px;
+      align-items: start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .article-row:first-child { border-top: 1px solid var(--border); }
+
+    .article-row:hover { background: var(--cream-dark); margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+
+    .article-row-date {
+      font-size: 0.8rem;
+      color: var(--gray-light);
+      padding-top: 3px;
+    }
+
+    .article-row-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .article-row-excerpt {
+      font-size: 0.825rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .article-row-tag {
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      background: var(--gold-light);
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    /* ─── EMPTY STATE ─── */
+    .empty-state {
+      text-align: center;
+      padding: 80px 64px;
+      color: var(--gray);
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      opacity: 0.4;
+    }
+
+    .empty-state h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .empty-state p { font-size: 0.9rem; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border);
+      padding: 40px 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer span { font-size: 0.75rem; color: var(--gray-light); }
+
+    .footer-links { display: flex; gap: 24px; }
+
+    .footer-links a {
+      font-size: 0.75rem;
+      color: var(--gray-light);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold-dark); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .topbar { padding: 0 24px; }
+      .topbar-nav { display: none; }
+      .page-header { padding: 48px 24px 36px; }
+      .page-header h1 { font-size: 2.2rem; }
+      .filter-bar { padding: 20px 24px; }
+      .results-info { padding: 16px 24px 0; }
+      .archive { padding: 24px 24px 64px; }
+      .article-row { grid-template-columns: 1fr; gap: 8px; }
+      .article-row-tag { align-self: start; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── TOP BAR ─── -->
+<header class="topbar">
+  <a href="index.html" class="topbar-logo">Lina <span>Kariim</span></a>
+
+  <nav class="topbar-nav">
+    <a href="index.html">Beranda</a>
+    <a href="arsip.html" class="active">Arsip</a>
+    <a href="index.html#about">Tentang</a>
+    <a href="https://catatanalin.wordpress.com" target="_blank">Blog</a>
+  </nav>
+
+  <div class="topbar-social">
+    <a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a>
+    <a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@linakariima" target="_blank">TikTok</a>
+  </div>
+</header>
+
+<!-- ─── PAGE HEADER ─── -->
+<section class="page-header">
+  <p class="page-header-eyebrow">Koleksi Lengkap</p>
+  <h1>Arsip Artikel</h1>
+  <p>Semua tulisan tentang seni, sejarah, dan filsafat — dari yang paling lama hingga paling baru.</p>
+</section>
+
+<!-- ─── FILTER BAR ─── -->
+<div class="filter-bar">
+  <span class="filter-label">Kategori:</span>
+  <button class="filter-btn active" data-filter="all">Semua</button>
+  <button class="filter-btn" data-filter="Seni">Seni</button>
+  <button class="filter-btn" data-filter="Sejarah">Sejarah</button>
+  <button class="filter-btn" data-filter="Filsafat">Filsafat</button>
+</div>
+
+<!-- ─── RESULTS INFO ─── -->
+<div class="results-info" id="results-info">Menampilkan 7 artikel</div>
+
+<!-- ─── ARCHIVE ─── -->
+<section class="archive" id="archive">
+
+  <!-- MEI 2026 -->
+  <div class="month-group" data-month="Mei 2026">
+    <h2 class="month-label">Mei 2026</h2>
+    <div class="article-list">
+
+      <div class="article-row" onclick="location.href='kedokteran-aneh-dalam-lukisan.html'">
+        <span class="article-row-date">8 Mei 2026</span>
+        <div>
+          <h3 class="article-row-title">Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan</h3>
+          <p class="article-row-excerpt">Trepanasi, kursi pengikat, dan operasi sebagai tontonan publik.</p>
+        </div>
+        <span class="article-row-tag">Seni &amp; Sejarah</span>
+      </div>
+
+      <div class="article-row" onclick="location.href='seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html'">
+        <span class="article-row-date">8 Mei 2026</span>
+        <div>
+          <h3 class="article-row-title">Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
+          <p class="article-row-excerpt">Bagaimana pelukis Barok menggunakan chiaroscuro untuk menceritakan drama.</p>
+        </div>
+        <span class="article-row-tag">Seni</span>
+      </div>
+
+      <div class="article-row" onclick="location.href='renaissance-yang-terlupakan-peran-wanita-dalam-seni.html'">
+        <span class="article-row-date">5 Mei 2026</span>
+        <div>
+          <h3 class="article-row-title">Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
+          <p class="article-row-excerpt">Sofonisba Anguissola, Properzia de Rossi, dan wanita lain yang membentuk era keemasan.</p>
+        </div>
+        <span class="article-row-tag">Sejarah</span>
+      </div>
+
+      <div class="article-row" onclick="location.href='beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik.html'">
+        <span class="article-row-date">2 Mei 2026</span>
+        <div>
+          <h3 class="article-row-title">Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</h3>
+          <p class="article-row-excerpt">Apa hubungan antara keindahan, kebaikan, dan makna hidup?</p>
+        </div>
+        <span class="article-row-tag">Filsafat</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- APRIL 2026 -->
+  <div class="month-group" data-month="April 2026">
+    <h2 class="month-label">April 2026</h2>
+    <div class="article-list">
+
+      <div class="article-row" onclick="location.href='mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna.html'">
+        <span class="article-row-date">28 April 2026</span>
+        <div>
+          <h3 class="article-row-title">Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</h3>
+          <p class="article-row-excerpt">Van Gogh dan para master menggunakan impasto untuk dimensi dan emosi.</p>
+        </div>
+        <span class="article-row-tag">Seni</span>
+      </div>
+
+      <div class="article-row" onclick="location.href='dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa.html'">
+        <span class="article-row-date">24 April 2026</span>
+        <div>
+          <h3 class="article-row-title">Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa</h3>
+          <p class="article-row-excerpt">Seni religi bertransisi dari katedral gothic hingga museum modern.</p>
+        </div>
+        <span class="article-row-tag">Sejarah</span>
+      </div>
+
+      <div class="article-row" onclick="location.href='simbolismus-ketika-seni-menjadi-meditasi.html'">
+        <span class="article-row-date">20 April 2026</span>
+        <div>
+          <h3 class="article-row-title">Simbolismus: Ketika Seni Menjadi Meditasi</h3>
+          <p class="article-row-excerpt">Era simbolis yang mistis mengekspresikan hal-hal yang tidak bisa diucapkan.</p>
+        </div>
+        <span class="article-row-tag">Filsafat</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EMPTY STATE (hidden by default) -->
+  <div class="empty-state" id="empty-state" style="display:none">
+    <div class="empty-state-icon">&#128269;</div>
+    <h2>Tidak ada artikel</h2>
+    <p>Coba pilih kategori lain.</p>
+  </div>
+
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <span>&copy; 2026 Lina Kariim</span>
+  <div class="footer-links">
+    <a href="index.html">Beranda</a>
+    <a href="arsip.html">Arsip</a>
+    <a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a>
+    <a href="https://catatanalin.wordpress.com" target="_blank">Blog</a>
+  </div>
+</footer>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const monthGroups = document.querySelectorAll('.month-group');
+  const emptyState = document.getElementById('empty-state');
+  const resultsInfo = document.getElementById('results-info');
+
+  let activeFilter = 'all';
+
+  function applyFilter(filter) {
+    activeFilter = filter;
+
+    filterBtns.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+
+    let totalVisible = 0;
+
+    monthGroups.forEach(group => {
+      const rows = group.querySelectorAll('.article-row');
+      let groupVisible = 0;
+
+      rows.forEach(row => {
+        const tag = row.querySelector('.article-row-tag').textContent.trim();
+        // Normalize: "Seni & Sejarah" includes "Seni"
+        const isMatch = filter === 'all' ||
+          tag === filter ||
+          (filter === 'Seni' && tag === 'Seni & Sejarah');
+        row.style.display = isMatch ? '' : 'none';
+        if (isMatch) groupVisible++;
+      });
+
+      // Hide month group if all its rows are hidden
+      group.style.display = groupVisible > 0 ? '' : 'none';
+      totalVisible += groupVisible;
+    });
+
+    // Empty state
+    emptyState.style.display = totalVisible === 0 ? 'block' : 'none';
+    document.getElementById('archive').style.display = totalVisible === 0 ? 'none' : '';
+
+    // Results info
+    if (filter === 'all') {
+      resultsInfo.textContent = 'Menampilkan 7 artikel';
+    } else {
+      resultsInfo.textContent = `Menampilkan ${totalVisible} artikel kategori "${filter}"`;
+    }
+  }
+
+  // Read ?cat= param on load so footer links work
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('cat');
+  if (catParam) applyFilter(catParam);
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.history.pushState({}, '', btn.dataset.filter === 'all' ? 'arsip.html' : 'arsip.html?cat=' + encodeURIComponent(btn.dataset.filter));
+      applyFilter(btn.dataset.filter);
+    });
+  });
+</script>
+
+</body>
+</html>
