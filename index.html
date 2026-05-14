@@ -548,20 +548,38 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      .topbar { padding: 0 24px; }
+      .topbar { padding: 0 20px; }
       .topbar-nav { display: none; }
+      .topbar-social { gap: 12px; font-size: 0.75rem; }
       .hero { grid-template-columns: 1fr; }
       .hero-image { display: none; }
-      .hero-content { border-right: none; padding: 48px 24px; }
-      .hero h1 { font-size: 2.4rem; }
-      .featured { padding: 48px 24px; }
+      .hero-content { border-right: none; padding: 40px 20px; }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 0.95rem; }
+      .hero-actions { flex-direction: column; gap: 12px; }
+      .hero-actions a { text-align: center; }
+      .featured { padding: 40px 20px; }
       .featured-grid { grid-template-columns: 1fr; }
-      .topics { padding: 40px 24px; flex-wrap: wrap; }
-      .articles { padding: 48px 24px; }
-      .articles-grid { grid-template-columns: 1fr; }
-      .newsletter { padding: 56px 24px; }
-      footer { padding: 48px 24px; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+      .featured-main h2 { font-size: 1.5rem; }
+      .featured-main p { font-size: 0.9rem; }
+      .topics { padding: 32px 20px; flex-wrap: wrap; gap: 8px; }
+      .topics a { font-size: 0.75rem; padding: 6px 12px; }
+      .articles { padding: 40px 20px; }
+      .articles-grid { grid-template-columns: 1fr; gap: 24px; }
+      .article-card { padding: 16px; }
+      .article-card h3 { font-size: 1rem; }
+      .article-card p { font-size: 0.85rem; }
+      .newsletter { padding: 48px 20px; }
+      .newsletter h2 { font-size: 1.5rem; }
+      .newsletter p { font-size: 0.9rem; }
+      .newsletter-form { flex-direction: column; gap: 10px; }
+      .newsletter-form input { width: 100%; }
+      .newsletter-form button { width: 100%; }
+      footer { padding: 40px 20px; flex-direction: column; gap: 16px; text-align: center; }
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-brand p { font-size: 0.875rem; }
+      .footer-col h4 { font-size: 0.85rem; }
+      .footer-col ul li { font-size: 0.85rem; }
     }
   </style>
 </head>
@@ -573,7 +591,7 @@
 
   <nav class="topbar-nav">
     <a href="arsip.html">Arsip</a>
-    <a href="#about">Tentang</a>
+    <a href="tentang.html">Tentang</a>
   </nav>
 
   <div class="topbar-social">
