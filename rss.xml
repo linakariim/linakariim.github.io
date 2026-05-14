@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lina Kariim</title>
+    <link>https://linakariim.github.io</link>
+    <description>Seni, sejarah, dan filsafat dalam Bahasa Indonesia</description>
+    <language>id-id</language>
+    <atom:link href="https://linakariim.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT')}</lastBuildDate>
+    <item>
+      <title>Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien</title>
+      <link>https://linakariim.github.io/kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien.html</link>
+      <guid>https://linakariim.github.io/kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien.html</guid>
+      <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan</title>
+      <link>https://linakariim.github.io/kedokteran-aneh-dalam-lukisan.html</link>
+      <guid>https://linakariim.github.io/kedokteran-aneh-dalam-lukisan.html</guid>
+      <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</title>
+      <link>https://linakariim.github.io/seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html</link>
+      <guid>https://linakariim.github.io/seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html</guid>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Renaissance yang Terlupakan: Peran Wanita dalam Seni</title>
+      <link>https://linakariim.github.io/renaissance-yang-terlupakan-peran-wanita-dalam-seni.html</link>
+      <guid>https://linakariim.github.io/renaissance-yang-terlupakan-peran-wanita-dalam-seni.html</guid>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</title>
+      <link>https://linakariim.github.io/beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik.html</link>
+      <guid>https://linakariim.github.io/beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik.html</guid>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</title>
+      <link>https://linakariim.github.io/mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna.html</link>
+      <guid>https://linakariim.github.io/mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna.html</guid>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa</title>
+      <link>https://linakariim.github.io/dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa.html</link>
+      <guid>https://linakariim.github.io/dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa.html</guid>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Simbolismus: Ketika Seni Menjadi Meditasi</title>
+      <link>https://linakariim.github.io/simbolismus-ketika-seni-menjadi-meditasi.html</link>
+      <guid>https://linakariim.github.io/simbolismus-ketika-seni-menjadi-meditasi.html</guid>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
