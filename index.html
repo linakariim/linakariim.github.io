@@ -3,38 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
-  <link rel="icon" type="image/png" sizes="64x64" href="favicon-32x32.png?v=3">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3">
-  <link rel="manifest" href="site.webmanifest">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lina Kariim — Lukisan, Sejarah, dan Filsafat</title>
-  
+  <title>Lina Kariim — Seni, Sejarah, dan Filsafat</title>
+  <meta name="description" content="Memperkenalkan seni, sejarah, dan filsafat dengan cara yang jujur dan bisa dirasakan. Dalam Bahasa Indonesia.">
+
   <link rel="canonical" href="https://linakariim.github.io/">
-  <meta property="og:title" content="Lina Kariim — Lukisan, Sejarah, dan Filsafat">
-  <meta property="og:description" content="Lina Kariim — menulis tentang seni, sejarah, dan filsafat. Setiap goresan lukisan, setiap tokoh, setiap cerita — kita explore bersama.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=85">
+  <meta property="og:title" content="Lina Kariim — Seni, Sejarah, dan Filsafat">
+  <meta property="og:description" content="Memperkenalkan seni, sejarah, dan filsafat dengan cara yang jujur dan bisa dirasakan.">
   <meta property="og:url" content="https://linakariim.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="id_ID">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lina Kariim — Lukisan, Sejarah, dan Filsafat">
-  <meta name="twitter:description" content="Lina Kariim — menulis tentang seni, sejarah, dan filsafat. Setiap goresan lukisan, setiap tokoh, setiap cerita — kita explore bersama.">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=85">
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Lina Kariim",
-  "url": "https://linakariim.github.io/",
-  "description": "Lina Kariim — menulis tentang seni, sejarah, dan filsafat. Setiap goresan lukisan, setiap tokoh, setiap cerita — kita explore bersama."
-}
-</script>
-  <meta name="description" content="Lina Kariim — menulis tentang seni, sejarah, dan filsafat. Setiap goresan lukisan, setiap tokoh, setiap cerita — kita explores bersama.">
-    
-    
-  <meta name="theme-color" content="#C9A96E">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -52,24 +32,18 @@
       --border: #E5DDD0;
       --white: #FFFFFF;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       background: var(--cream);
       color: var(--black);
       font-family: 'DM Sans', sans-serif;
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
-
     a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    button { cursor: pointer; border: none; background: none; font: inherit; }
 
-    /* ─── TOP BAR ─── */
-    .topbar {
+    .nav {
       border-bottom: 1px solid var(--border);
       padding: 0 64px;
       display: flex;
@@ -77,532 +51,299 @@
       justify-content: space-between;
       height: 64px;
     }
-
-    .topbar-logo {
+    .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 600;
+      color: var(--black);
       letter-spacing: -0.5px;
-      color: var(--black);
     }
-
-    .topbar-logo span { color: var(--gold); }
-
-    .topbar-nav {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-    }
-
-    .topbar-nav a {
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
       font-size: 0.8rem;
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: var(--gray);
       transition: color 0.2s;
     }
+    .nav-links a:hover { color: var(--gold-dark); }
 
-    .topbar-nav a:hover { color: var(--gold-dark); }
-
-    .topbar-social {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .topbar-social a {
-      color: var(--gray);
-      font-size: 0.75rem;
-      letter-spacing: 0.3px;
-      transition: color 0.2s;
-    }
-
-    .topbar-social a:hover { color: var(--gold-dark); }
-
-    /* ─── HERO ─── */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 560px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-content {
-      padding: 72px 64px 72px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-right: 1px solid var(--border);
-    }
-
-    .hero-eyebrow {
-      font-size: 0.7rem;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--gold-dark);
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.4rem;
-      font-weight: 400;
-      line-height: 1.12;
-      color: var(--black);
-      margin-bottom: 28px;
-      letter-spacing: -1px;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-dark);
-    }
-
-    .hero p {
-      font-size: 1rem;
-      color: var(--gray);
-      line-height: 1.75;
-      max-width: 420px;
-      margin-bottom: 36px;
-    }
-
-    .hero-actions { display: flex; gap: 16px; align-items: center; }
-
-    .btn-gold {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--gold);
-      color: var(--white);
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-      padding: 14px 28px;
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
-
-    .btn-gold:hover { background: var(--gold-dark); }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid var(--border);
-      color: var(--gray);
-      font-size: 0.8rem;
-      padding: 14px 28px;
-      border-radius: 2px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    .btn-outline:hover { border-color: var(--gold); color: var(--gold-dark); }
-
-    .hero-image {
-      background: var(--charcoal);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.85;
-    }
-
-    .hero-image-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(13,13,13,0.3) 0%, transparent 60%);
-    }
-
-    /* ─── FEATURED ARTICLE ─── */
-    .featured {
-      padding: 72px 64px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .section-label {
-      font-size: 0.7rem;
+    .featured { padding: 56px 64px 64px; }
+    .featured-label {
+      font-size: 0.65rem;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gold-dark);
-      margin-bottom: 32px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 48px;
+      margin-bottom: 28px;
     }
 
     .featured-main {
-      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
     }
 
-    .featured-main-thumb {
-      aspect-ratio: 16/10;
+    .featured-main-img {
+      aspect-ratio: 16/9;
       overflow: hidden;
-      margin-bottom: 24px;
+      border-radius: 2px;
       background: var(--cream-dark);
     }
-
-    .featured-main-thumb img {
+    .featured-main-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s;
+      display: block;
     }
-
-    .featured-main:hover .featured-main-thumb img { transform: scale(1.03); }
-
-    .featured-main-tag {
+    .featured-main-content { padding: 0 0 0 8px; }
+    .featured-article-tag {
       display: inline-block;
       font-size: 0.65rem;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--gold-dark);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
-
     .featured-main h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
       font-weight: 400;
-      line-height: 1.25;
+      line-height: 1.2;
       color: var(--black);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       letter-spacing: -0.5px;
     }
-
     .featured-main p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--gray);
       line-height: 1.7;
+      margin-bottom: 24px;
     }
-
-    .featured-side {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-
-    .featured-side-item {
-      cursor: pointer;
-      padding-bottom: 28px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .featured-side-item:last-child { border-bottom: none; }
-
-    .featured-side-item .tag {
-      font-size: 0.65rem;
-      letter-spacing: 1.5px;
+    .featured-main .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--gold-dark);
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    .featured-side-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      line-height: 1.3;
-      color: var(--black);
-      margin-bottom: 8px;
-    }
-
-    .featured-side-item p {
-      font-size: 0.8rem;
-      color: var(--gray-light);
-    }
-
-    /* ─── TOPICS ─── */
-    .topics {
-      padding: 56px 64px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .topics-label {
-      font-size: 0.7rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gray);
-    }
-
-    .topics-list {
-      display: flex;
-      gap: 12px;
-    }
-
-    .topic-btn {
-      padding: 8px 20px;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      font-size: 0.75rem;
-      letter-spacing: 0.5px;
-      color: var(--gray);
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 2px;
       transition: all 0.2s;
     }
-
-    .topic-btn:hover, .topic-btn.active {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--white);
+    .featured-main .read-more:hover {
+      color: var(--gold-dark);
+      border-color: var(--gold-dark);
     }
 
-    /* ─── ARTICLES GRID ─── */
-    .articles {
-      padding: 72px 64px;
-    }
-
-    .articles-header {
+    .articles-section { padding: 0 64px 64px; max-width: 1200px; margin: 0 auto; }
+    .section-header {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: space-between;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
     }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--black);
+    }
+    .section-link {
+      font-size: 0.75rem;
+      color: var(--gray-light);
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    .section-link:hover { color: var(--gold-dark); }
 
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      gap: 32px;
     }
 
     .article-card {
+      display: flex;
+      flex-direction: column;
       cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
-
-    .article-thumb {
-      aspect-ratio: 4/3;
+    .article-card-img {
+      aspect-ratio: 16/9;
       overflow: hidden;
-      margin-bottom: 20px;
+      border-radius: 2px;
       background: var(--cream-dark);
+      margin-bottom: 16px;
     }
-
-    .article-thumb img {
+    .article-card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s;
+      display: block;
+      transition: transform 0.3s;
     }
-
-    .article-card:hover .article-thumb img { transform: scale(1.04); }
-
-    .article-tag {
-      font-size: 0.65rem;
+    .article-card:hover .article-card-img img { transform: scale(1.03); }
+    .article-card-tag {
+      font-size: 0.62rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--gold-dark);
-      margin-bottom: 10px;
-      display: block;
+      margin-bottom: 8px;
     }
-
     .article-card h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.1rem;
       font-weight: 400;
-      line-height: 1.3;
       color: var(--black);
-      margin-bottom: 10px;
+      line-height: 1.3;
+      margin-bottom: 8px;
     }
-
-    .article-card p {
-      font-size: 0.825rem;
-      color: var(--gray);
-      margin-bottom: 14px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .article-date {
-      font-size: 0.75rem;
+    .article-card-meta {
+      font-size: 0.72rem;
       color: var(--gray-light);
     }
 
-    /* ─── NEWSLETTER ─── */
     .newsletter {
-      background: var(--black);
-      color: var(--cream);
-      padding: 80px 64px;
+      background: var(--cream-dark);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 64px;
       text-align: center;
     }
-
     .newsletter h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       font-weight: 400;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-      color: var(--cream);
+      color: var(--black);
+      margin-bottom: 8px;
     }
-
     .newsletter p {
       font-size: 0.9rem;
-      color: var(--gray-light);
-      max-width: 420px;
-      margin: 0 auto 32px;
+      color: var(--gray);
+      margin-bottom: 28px;
     }
-
     .newsletter-form {
       display: flex;
       gap: 0;
-      max-width: 420px;
+      max-width: 480px;
       margin: 0 auto;
     }
-
     .newsletter-form input {
       flex: 1;
-      padding: 14px 20px;
-      background: var(--charcoal);
-      border: 1px solid var(--charcoal);
-      color: var(--cream);
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-right: none;
+      background: var(--white);
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       outline: none;
       border-radius: 2px 0 0 2px;
     }
-
-    .newsletter-form input::placeholder { color: var(--gray); }
-
+    .newsletter-form input::placeholder { color: var(--gray-light); }
     .newsletter-form button {
-      padding: 14px 24px;
+      padding: 12px 24px;
       background: var(--gold);
       color: var(--white);
+      border: 1px solid var(--gold);
+      font-family: 'DM Sans', sans-serif;
       font-size: 0.8rem;
-      font-weight: 500;
       letter-spacing: 0.5px;
+      cursor: pointer;
       border-radius: 0 2px 2px 0;
       transition: background 0.2s;
     }
+    .newsletter-form button:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
 
-    .newsletter-form button:hover { background: var(--gold-dark); }
-
-    /* ─── FOOTER ─── */
     footer {
       background: var(--cream-dark);
       border-top: 1px solid var(--border);
-      padding: 64px;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 56px;
-    }
-
-    .footer-brand h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--black);
-      margin-bottom: 14px;
-    }
-
-    .footer-brand h3 span { color: var(--gold); }
-
-    .footer-brand p {
-      font-size: 0.825rem;
-      color: var(--gray);
-      line-height: 1.7;
-      max-width: 280px;
-    }
-
-    .footer-col h4 {
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 18px;
-    }
-
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-
-    .footer-col a {
-      font-size: 0.825rem;
-      color: var(--gray);
-      transition: color 0.2s;
-    }
-
-    .footer-col a:hover { color: var(--gold-dark); }
-
-    .footer-bottom {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
+      padding: 40px 64px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
-    .footer-bottom span {
-      font-size: 0.75rem;
-      color: var(--gray-light);
-    }
-
-    .footer-bottom-links { display: flex; gap: 24px; }
-
-    .footer-bottom-links a {
+    footer span { font-size: 0.75rem; color: var(--gray-light); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a {
       font-size: 0.75rem;
       color: var(--gray-light);
       transition: color 0.2s;
     }
+    .footer-links a:hover { color: var(--gold-dark); }
 
-    .footer-bottom-links a:hover { color: var(--gold-dark); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
-      .topbar { padding: 0 20px; }
-      .topbar-nav { display: none; }
-      .topbar-social { gap: 12px; font-size: 0.75rem; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-image { display: none; }
-      .hero-content { border-right: none; padding: 40px 20px; }
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 0.95rem; }
-      .hero-actions { flex-direction: column; gap: 12px; }
-      .hero-actions a { text-align: center; }
-      .featured { padding: 40px 20px; }
-      .featured-grid { grid-template-columns: 1fr; }
-      .featured-main h2 { font-size: 1.5rem; }
-      .featured-main p { font-size: 0.9rem; }
-      .topics { padding: 32px 20px; flex-wrap: wrap; gap: 8px; }
-      .topics a { font-size: 0.75rem; padding: 6px 12px; }
-      .articles { padding: 40px 20px; }
+    @media (max-width: 768px) {
+      .nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .featured { padding: 40px 24px 48px; }
+      .featured-main { grid-template-columns: 1fr; gap: 24px; }
+      .featured-main h2 { font-size: 1.6rem; }
+      .articles-section { padding: 0 24px 48px; }
       .articles-grid { grid-template-columns: 1fr; gap: 24px; }
-      .article-card { padding: 16px; }
-      .article-card h3 { font-size: 1rem; }
-      .article-card p { font-size: 0.85rem; }
-      .newsletter { padding: 48px 20px; }
-      .newsletter h2 { font-size: 1.5rem; }
-      .newsletter p { font-size: 0.9rem; }
-      .newsletter-form { flex-direction: column; gap: 10px; }
-      .newsletter-form input { width: 100%; }
-      .newsletter-form button { width: 100%; }
-      footer { padding: 40px 20px; flex-direction: column; gap: 16px; text-align: center; }
-      .footer-top { grid-template-columns: 1fr; gap: 32px; }
-      .footer-brand p { font-size: 0.875rem; }
-      .footer-col h4 { font-size: 0.85rem; }
-      .footer-col ul li { font-size: 0.85rem; }
+      .newsletter { padding: 40px 24px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input { border-right: 1px solid var(--border); border-radius: 2px; }
+      .newsletter-form button { border-radius: 2px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
     }
   </style>
+
+  <script>
+    // Load articles from JSON — single source of truth for all article cards
+    async function loadArticles() {
+      try {
+        const resp = await fetch('articles.json');
+        const articles = await resp.json();
+
+        // Featured main: first article
+        const featured = articles[0];
+        const featuredEl = document.getElementById('featured-main');
+        if (featuredEl) {
+          featuredEl.href = featured.slug + '.html';
+          featuredEl.querySelector('.featured-main-img img').src = featured.cover;
+          featuredEl.querySelector('.featured-main-img img').alt = featured.coverAlt || featured.title;
+          const tag = featuredEl.querySelector('.featured-article-tag');
+          if (tag) tag.textContent = featured.category;
+          const h2 = featuredEl.querySelector('h2');
+          if (h2) h2.textContent = featured.title;
+          const p = featuredEl.querySelector('.featured-main p');
+          if (p) p.textContent = featured.description;
+        }
+
+        // Artikel Terbaru grid: next 6 articles
+        const grid = document.getElementById('articles-grid');
+        if (grid) {
+          grid.innerHTML = '';
+          const gridArticles = articles.slice(1, 7); // index 1-6
+          gridArticles.forEach(a => {
+            const card = document.createElement('a');
+            card.className = 'article-card';
+            card.href = a.slug + '.html';
+            card.innerHTML = `
+              <div class="article-card-img">
+                <img src="${a.cover}" alt="${a.coverAlt || a.title}" loading="lazy">
+              </div>
+              <span class="article-card-tag">${a.category}</span>
+              <h3>${a.title}</h3>
+              <p class="article-card-meta">${a.dateDisplay} · ${a.readTime} min baca</p>
+            `;
+            grid.appendChild(card);
+          });
+        }
+      } catch(e) {
+        console.error('Failed to load articles:', e);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadArticles);
+  </script>
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXXVF7WZJH"></script>
   <script>
@@ -614,212 +355,56 @@
 </head>
 <body>
 
-<!-- ─── TOP BAR ─── -->
-<header class="topbar">
-  <a href="#" class="topbar-logo">Lina <span>Kariim</span></a>
-
-  <nav class="topbar-nav">
-    <a href="arsip.html">Arsip</a>
-    <a href="tentang.html">Tentang</a>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Lina <span>Kariim</span></a>
+    <ul class="nav-links">
+      <li><a href="arsip.html">Artikel</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="arsip.html#topics">Topik</a></li>
+    </ul>
   </nav>
 
-  <div class="topbar-social">
-    <a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a>
-    <a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@linakariima" target="_blank">TikTok</a>
-  </div>
-</header>
+  <section class="featured">
+    <div class="featured-label">Featured</div>
+    <a id="featured-main" class="featured-main" href="#">
+      <div class="featured-main-img">
+        <img src="" alt="">
+      </div>
+      <div class="featured-main-content">
+        <span class="featured-article-tag"></span>
+        <h2></h2>
+        <p></p>
+        <span class="read-more">Baca Selengkapnya →</span>
+      </div>
+    </a>
+  </section>
 
-<!-- ─── HERO ─── -->
-<section class="hero">
-  <div class="hero-content">
-    <p class="hero-eyebrow">Seni &middot; Sejarah &middot; Filsafat</p>
-    <h1>Dari <em>Lukisan</em> ke <em>Hati</em></h1>
-    <p>Setiap goresan punya cerita. Setiap lukisan punya jiwa. Di sini kita jelajahi seni, tokoh sejarah, dan pemikiran filsafat — dengan cara yang tidak biasa.</p>
-    <div class="hero-actions">
-      <a href="#articles" class="btn-gold">Baca Artikel</a>
-      <a href="https://www.youtube.com/@linakariima" target="_blank" class="btn-outline">YouTube</a>
+  <section class="articles-section">
+    <div class="section-header">
+      <h2 class="section-title">Artikel Terbaru</h2>
+      <a class="section-link" href="arsip.html">Lihat semua →</a>
     </div>
-  </div>
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&amp;q=85" alt="Lukisan abstrak emas dan cream di kanvas">
-    <div class="hero-image-overlay"></div>
-  </div>
-</section>
-
-<!-- ─── FEATURED ─── -->
-<section class="featured" id="articles">
-  <p class="section-label">Artikel Pilihan</p>
-
-  <div class="featured-grid">
-    <article class="featured-main" onclick="location.href='kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien.html'">
-      <div class="featured-main-thumb">
-        <img src="images/kedokteran-islam-thumbnail.jpg" alt="Une leçon clinique à la Salpêtrière">
-      </div>
-      <span class="featured-main-tag">Sejarah</span>
-      <h2>Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien</h2>
-      <p>Bimaristan, kritik terhadap Galen, dan gagasan bahwa pasien adalah manusia yang harus dijaga martabatnya, menjelajahi praktik kedokteran mengerikan yang diabadikan dalam lukisan sejarah.</p>
-    </article>
-
-    <div class="featured-side">
-      <article class="featured-side-item" onclick="location.href='kedokteran-aneh-dalam-lukisan.html'" style="cursor:pointer">
-        <span class="tag">Seni &amp; Sejarah</span>
-        <h3>Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan</h3>
-        <p>6 min baca</p>
-      </article>
-      <article class="featured-side-item" onclick="location.href='seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html'" style="cursor:pointer">
-        <span class="tag">Seni</span>
-        <h3>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
-        <p>5 min baca</p>
-      </article>
-      <article class="featured-side-item" onclick="location.href='renaissance-yang-terlupakan-peran-wanita-dalam-seni.html'" style="cursor:pointer">
-        <span class="tag">Sejarah</span>
-        <h3>Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
-        <p>5 min baca</p>
-      </article>
+    <div id="articles-grid" class="articles-grid">
+      <!-- Populated by JS from articles.json -->
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ─── TOPICS ─── -->
-<div class="topics" id="topics">
-  <span class="topics-label">Telusuri:</span>
-  <div class="topics-list">
-    <button class="topic-btn active">Semua</button>
-    <button class="topic-btn">Seni</button>
-    <button class="topic-btn">Sejarah</button>
-    <button class="topic-btn">Filsafat</button>
-  </div>
-</div>
+  <section class="newsletter">
+    <h2>Tunggu, ada lebih banyak.</h2>
+    <p>Surat untukmu yang ingin melihat lebih dalam.</p>
+    <form class="newsletter-form" action="https://formspree.io/f/mnjwyong" method="POST">
+      <input type="email" name="email" placeholder="Email-mu" required>
+      <button type="submit">Ikuti</button>
+    </form>
+  </section>
 
-<!-- ─── ARTICLES GRID ─── -->
-<section class="articles">
-  <div class="articles-header">
-    <p class="section-label" style="margin-bottom: 0">Artikel Terbaru</p>
-    <a href="arsip.html" style="font-size:0.8rem; color:var(--gold-dark); letter-spacing:0.5px;">Lihat semua &rarr;</a>
-    </div>
-
-  <div class="articles-grid">
-    <article class="article-card" onclick="location.href='kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/kedokteran-islam-thumbnail.jpg" alt="Kedokteran Islam">
-      </div>
-      <div class="article-info">
-        <span class="tag">Sejarah</span>
-        <h3>Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien</h3>
-        <p>7 min baca</p>
-      </div>
-    </article>
-
-    <article class="article-card" onclick="location.href='seni-barok-drama-cahaya-dan-emosi-dalam-kanvas.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/seni-barok-thumbnail.jpg" alt="Seni Barok">
-        <span class="tag">Seni</span>
-        <h3>Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas</h3>
-        <p>5 min baca</p>
-      </div>
-    </article>
-
-    <article class="article-card" onclick="location.href='renaissance-yang-terlupakan-peran-wanita-dalam-seni.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/renaissance-thumbnail.jpg" alt="Renaissance">
-      </div>
-      <div class="article-info">
-        <span class="tag">Sejarah</span>
-        <h3>Renaissance yang Terlupakan: Peran Wanita dalam Seni</h3>
-        <p>5 min baca</p>
-      </div>
-    </article>
-
-    <article class="article-card" onclick="location.href='beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/beauty-thumbnail.jpg" alt="Beauty dan Kebenaran">
-      </div>
-      <div class="article-info">
-        <span class="tag">Filsafat</span>
-        <h3>Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?</h3>
-        <p>4 min baca</p>
-      </div>
-    </article>
-
-    <article class="article-card" onclick="location.href='mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/impasto-thumbnail.jpg" alt="Impasto">
-      </div>
-      <div class="article-info">
-        <span class="tag">Seni</span>
-        <h3>Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna</h3>
-        <p>5 min baca</p>
-      </div>
-    </article>
-
-    <article class="article-card" onclick="location.href='dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa.html'" style="cursor:pointer">
-      <div class="article-thumb">
-        <img src="images/seni-sacra-thumbnail.jpg" alt="Seni Sacra">
-      </div>
-      <div class="article-info">
-        <span class="tag">Sejarah</span>
-        <h3>Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa</h3>
-        <p>5 min baca</p>
-      </div>
-    </article>
-  </div>
-
-</section><section class="newsletter">
-  <h2>Ikuti Cerita Baru</h2>
-  <p>Setiap minggu, satu artikel baru tentang seni, sejarah, dan filsafat — langsung ke inbox kamu.</p>
-  <form action="https://formspree.io/f/mnjwyong" method="POST" class="newsletter-form">
-    <input type="email" name="email" placeholder="Email kamu..." required>
-    <button type="submit">Berlangganan</button>
-  </form>
-</section>
-
-<!-- ─── FOOTER ─── -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <h3>Lina <span>Kariim</span></h3>
-      <p>Konten seni, sejarah, dan filsafat dalam bahasa Indonesia. Setiap goresan punya makna — mari kita explore bersama.</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Navigasi</h4>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="arsip.html">Arsip</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Topik</h4>
-      <ul>
-        <li><a href="arsip.html">Semua</a></li>
-        <li><a href="arsip.html?cat=Seni">Seni</a></li>
-        <li><a href="arsip.html?cat=Sejarah">Sejarah</a></li>
-        <li><a href="arsip.html?cat=Filsafat">Filsafat</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Sosial</h4>
-      <ul>
-        <li><a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a></li>
-        <li><a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a></li>
-        <li><a href="https://www.tiktok.com/@linakariima" target="_blank">TikTok</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
+  <footer>
     <span>&copy; 2026 Lina Kariim</span>
-    <div class="footer-bottom-links">
-      <a href="#">Privasi</a>
-      <a href="#">Tentang</a>
-      <a href="#">Kontak</a>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/@linakariima" target="_blank">YouTube</a>
+      <a href="https://www.instagram.com/linakariima" target="_blank">Instagram</a>
+      <a href="arsip.html">Arsip</a>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>

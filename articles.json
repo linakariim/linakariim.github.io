@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "seni-barok-drama-cahaya-dan-emosi-dalam-kanvas",
+    "title": "Seni Barok: Drama, Cahaya, dan Emosi dalam Kanvas",
+    "category": "Seni",
+    "date": "2025-04-27",
+    "dateDisplay": "27 April 2025",
+    "readTime": 7,
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/5/59/Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg",
+    "coverAlt": "The Calling of Saint Matthew — Caravaggio",
+    "description": "Bagaimana cahaya, bayangan, dan emosi diagungkan dalam lukisan Barok, dan mengapa Caravaggio jadi pusat segalanya."
+  },
+  {
+    "slug": "renaissance-yang-terlupakan-peran-wanita-dalam-seni",
+    "title": "Renaissance yang Terlupakan: Peran Wanita dalam Seni",
+    "category": "Seni",
+    "date": "2025-04-19",
+    "dateDisplay": "19 April 2025",
+    "readTime": 7,
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Sofonisba_Anguissola_-_Autoritratto_%281554%29.jpg",
+    "coverAlt": "Sofonisba Anguissola — Self-Portrait 1554",
+    "description": "Wanita-wanita Renaissance yang melukis, mengukir, dan menolak untuk dilupakan dalam sejarah seni."
+  },
+  {
+    "slug": "beauty-dan-kebenaran-apakah-seni-bisa-membuat-kita-lebih-baik",
+    "title": "Beauty dan Kebenaran: Apakah Seni Bisa Membuat Kita Lebih Baik?",
+    "category": "Filsafat",
+    "date": "2025-04-12",
+    "dateDisplay": "12 April 2025",
+    "readTime": 4,
+    "cover": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=85",
+    "coverAlt": "Lukisan dengan kedalaman filosofis",
+    "description": "Plato pernah mengusir penyair dari republiknya. Apakah ia salah? Menjelajahi hubungan antara keindahan dan kebaikan."
+  },
+  {
+    "slug": "mengenal-teknik-impasto-ketika-cat-jadi-lebih-dari-warna",
+    "title": "Mengenal Teknik Impasto: Ketika Cat Jadi Lebih dari Warna",
+    "category": "Seni",
+    "date": "2025-03-28",
+    "dateDisplay": "28 Maret 2025",
+    "readTime": 5,
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg",
+    "coverAlt": "Wheatfield with Crows — Vincent van Gogh",
+    "description": "Impasto, teknik cat yang dilapis tebal sampai teksturnya sendiri jadi bagian dari lukisan. Dari Rembrandt sampai Van Gogh."
+  },
+  {
+    "slug": "dari-katedral-ke-galeri-transformasi-seni-sacra-di-eropa",
+    "title": "Dari Katedral ke Galeri: Transformasi Seni Sacra di Eropa",
+    "category": "Seni",
+    "date": "2025-03-15",
+    "dateDisplay": "15 Maret 2025",
+    "readTime": 6,
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/2/28/Notre_Dame_de_Chartres.jpg",
+    "coverAlt": "Katedral Gotik dengan jendela kaca berwarna",
+    "description": "Seni yang dulu dibuat untuk menyucikan jiwa dan memuliakan Tuhan, berakhir di museum sebagai objek yang dikagumi tapi tidak lagi disembah."
+  },
+  {
+    "slug": "simbolismus-ketika-seni-menjadi-meditasi",
+    "title": "Simbolismus: Ketika Seni Menjadi Meditasi",
+    "category": "Seni",
+    "date": "2025-03-01",
+    "dateDisplay": "1 Maret 2025",
+    "readTime": 5,
+    "cover": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200&q=85",
+    "coverAlt": "Lukisan simbolis dengan suasana mistis",
+    "description": "Simbolisme bukan sekadar gerakan seni. Ini cara pandang bahwa setiap bentuk di dunia ini menyimpan makna yang lebih dalam."
+  },
+  {
+    "slug": "kedokteran-aneh-dalam-lukisan",
+    "title": "Kedokteran Aneh dalam Lukisan: Ketika Penyembuhan adalah Tontonan",
+    "category": "Sejarah",
+    "date": "2025-05-09",
+    "dateDisplay": "9 Mei 2025",
+    "readTime": 6,
+    "cover": "https://upload.wikimedia.org/wikipedia/commons/6/67/Une_le%C3%A7on_clinique_%C3%A0_la_Salp%C3%AAtri%C3%A8re.jpg",
+    "coverAlt": "Une leçon clinique à la Salpêtrière — André Brouillet 1887",
+    "description": "Sebelum ada etika medis, ada seni medis. Bagaimana lukisan merekam wajah kedokteran era pra-modern."
+  },
+  {
+    "slug": "kedokteran-islam-bimaristan-kritik-galen-dan-martabat-pasien",
+    "title": "Kedokteran Islam — Bimaristan, Kritik Galen, dan Martabat Pasien",
+    "category": "Sejarah",
+    "date": "2026-05-14",
+    "dateDisplay": "14 Mei 2026",
+    "readTime": 7,
+    "cover": "images/kedokteran-islam-cover.jpg",
+    "coverAlt": "Ilustrasi kedokteran Islam klasik",
+    "description": "Bimaristan, kritik terhadap Galen, dan gagasan bahwa pasien adalah manusia yang harus dijaga martabatnya."
+  }
+]
