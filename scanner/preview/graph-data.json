@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": "tata-kelola-chg",
+      "label": "Tata Kelola",
+      "sub": "Perubahan Kebijakan",
+      "count": 13,
+      "signal": "response",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "stunting-celah",
+      "label": "Stunting / Gizi",
+      "sub": "Celah Implementasi",
+      "count": 4,
+      "signal": "pressure",
+      "color": "#ef4444"
+    },
+    {
+      "id": "akses-jkn-chg",
+      "label": "Akses JKN",
+      "sub": "Perubahan Kebijakan",
+      "count": 1,
+      "signal": "response",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "iuran-bpjs-tekanan",
+      "label": "Iuran BPJS",
+      "sub": "Tekanan Fiskal",
+      "count": 1,
+      "signal": "pressure",
+      "color": "#ef4444"
+    },
+    {
+      "id": "tata-kelola-unknown",
+      "label": "Tata Kelola",
+      "sub": "Unknown",
+      "count": 214,
+      "signal": "neutral",
+      "color": "#94a3b8"
+    }
+  ],
+  "links": [
+    {
+      "source": "tata-kelola-chg",
+      "target": "tata-kelola-unknown",
+      "width": 13
+    },
+    {
+      "source": "stunting-celah",
+      "target": "tata-kelola-chg",
+      "width": 2
+    },
+    {
+      "source": "stunting-celah",
+      "target": "tata-kelola-unknown",
+      "width": 2
+    },
+    {
+      "source": "akses-jkn-chg",
+      "target": "tata-kelola-unknown",
+      "width": 1
+    },
+    {
+      "source": "iuran-bpjs-tekanan",
+      "target": "tata-kelola-unknown",
+      "width": 1
+    }
+  ]
+}
